@@ -8,6 +8,11 @@ const { resolveSafeRealPath } = require("../lib/symlink-safety");
 
 const REPO = "https://github.com/c0ze/agents-curated-skills.git";
 const HOME = process.env.HOME || process.env.USERPROFILE || "";
+const MANIFEST_FILE = ".agents-curated-skills-manifest.json";
+
+function getSharedAgentsPath() {
+  return path.join(HOME, ".agents", "skills");
+}
 
 function resolveDir(p) {
   if (!p) return null;
@@ -15,11 +20,12 @@ function resolveDir(p) {
   return path.resolve(s);
 }
 
-function parseArgs() {
-  const a = process.argv.slice(2);
+function parseArgs(argv = process.argv.slice(2)) {
+  const a = argv;
   let pathArg = null;
   let versionArg = null;
   let tagArg = null;
+  let action = "install";
   let cursor = false,
     claude = false,
     gemini = false,
@@ -29,6 +35,14 @@ function parseArgs() {
 
   for (let i = 0; i < a.length; i++) {
     if (a[i] === "--help" || a[i] === "-h") return { help: true };
+    if (a[i] === "install") {
+      action = "install";
+      continue;
+    }
+    if (a[i] === "uninstall" || a[i] === "--uninstall") {
+      action = "uninstall";
+      continue;
+    }
     if (a[i] === "--path" && a[i + 1]) {
       pathArg = a[++i];
       continue;
@@ -65,10 +79,10 @@ function parseArgs() {
       kiro = true;
       continue;
     }
-    if (a[i] === "install") continue;
   }
 
   return {
+    action,
     pathArg,
     versionArg,
     tagArg,
@@ -96,11 +110,7 @@ function getTargets(opts) {
     targets.push({ name: "Gemini CLI", path: path.join(HOME, ".gemini", "skills") });
   }
   if (opts.codex) {
-    const codexHome = process.env.CODEX_HOME;
-    const codexPath = codexHome
-      ? path.join(codexHome, "skills")
-      : path.join(HOME, ".codex", "skills");
-    targets.push({ name: "Codex CLI", path: codexPath });
+    targets.push({ name: "Codex CLI", path: getSharedAgentsPath() });
   }
   if (opts.kiro) {
     targets.push({ name: "Kiro", path: path.join(HOME, ".kiro", "skills") });
@@ -118,17 +128,18 @@ function printHelp() {
   console.log(`
 agents-curated-skills — installer
 
-  npx agents-curated-skills [install] [options]
+  npx agents-curated-skills [install|uninstall] [options]
 
-  Clones the skills repo into your agent's skills directory.
+  Install or remove the skills repo from your agent's skills directory.
 
 Options:
   --cursor       Install to ~/.cursor/skills (Cursor)
   --claude       Install to ~/.claude/skills (Claude Code)
   --gemini       Install to ~/.gemini/skills (Gemini CLI)
-  --codex        Install to ~/.codex/skills (Codex CLI)
+  --codex        Install to ~/.agents/skills (Codex CLI shared path)
   --kiro         Install to ~/.kiro/skills (Kiro CLI)
   --antigravity  Install to ~/.gemini/antigravity/skills (Antigravity)
+  --uninstall    Remove installed skills instead of installing them
   --path <dir>   Install to <dir> (default: ~/.gemini/antigravity/skills)
   --version <ver>  After clone, checkout tag v<ver> (e.g. 4.6.0 -> v4.6.0)
   --tag <tag>      After clone, checkout this tag (e.g. v4.6.0)
@@ -136,6 +147,7 @@ Options:
 Examples:
   npx agents-curated-skills
   npx agents-curated-skills --cursor
+  npx agents-curated-skills uninstall --codex
   npx agents-curated-skills --kiro
   npx agents-curated-skills --antigravity
   npx agents-curated-skills --version 4.6.0
@@ -169,24 +181,76 @@ function copyRecursiveSync(src, dest, rootDir = src, skipGit = true) {
   }
 }
 
-/** Copy contents of repo's skills/ into target so each skill is target/skill-name/ (for Claude Code etc.). */
-function installSkillsIntoTarget(tempDir, target) {
+function getRepoSkillNames(tempDir) {
   const repoSkills = path.join(tempDir, "skills");
   if (!fs.existsSync(repoSkills)) {
     console.error("Cloned repo has no skills/ directory.");
     process.exit(1);
   }
-  fs.readdirSync(repoSkills).forEach((name) => {
+  return fs.readdirSync(repoSkills).filter((name) => {
+    const full = path.join(repoSkills, name);
+    return (
+      fs.existsSync(full) &&
+      fs.statSync(full).isDirectory() &&
+      fs.existsSync(path.join(full, "SKILL.md"))
+    );
+  });
+}
+
+function getManifestPath(targetPath) {
+  return path.join(targetPath, MANIFEST_FILE);
+}
+
+function readInstallManifest(targetPath) {
+  const manifestPath = getManifestPath(targetPath);
+  if (!fs.existsSync(manifestPath)) {
+    return null;
+  }
+  try {
+    return JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+  } catch (error) {
+    console.warn(`  Ignoring unreadable manifest at ${manifestPath}: ${error.message}`);
+    return null;
+  }
+}
+
+function writeInstallManifest(targetPath, skillNames, docsInstalled) {
+  const manifest = {
+    version: 1,
+    repo: REPO,
+    installedAt: new Date().toISOString(),
+    skillNames,
+    docsInstalled,
+  };
+  fs.writeFileSync(getManifestPath(targetPath), JSON.stringify(manifest, null, 2) + "\n");
+}
+
+function removeRecursiveSync(targetPath) {
+  if (fs.rmSync) {
+    fs.rmSync(targetPath, { recursive: true, force: true });
+  } else {
+    fs.rmdirSync(targetPath, { recursive: true });
+  }
+}
+
+/** Copy contents of repo's skills/ into target so each skill is target/skill-name/ (for Claude Code etc.). */
+function installSkillsIntoTarget(tempDir, target) {
+  const repoSkills = path.join(tempDir, "skills");
+  const skillNames = getRepoSkillNames(tempDir);
+  skillNames.forEach((name) => {
     const src = path.join(repoSkills, name);
     const dest = path.join(target, name);
     copyRecursiveSync(src, dest, repoSkills);
   });
   const repoDocs = path.join(tempDir, "docs");
+  let docsInstalled = false;
   if (fs.existsSync(repoDocs)) {
     const docsDest = path.join(target, "docs");
     if (!fs.existsSync(docsDest)) fs.mkdirSync(docsDest, { recursive: true });
     copyRecursiveSync(repoDocs, docsDest, repoDocs);
+    docsInstalled = true;
   }
+  writeInstallManifest(target, skillNames, docsInstalled);
 }
 
 function run(cmd, args, opts = {}) {
@@ -233,9 +297,43 @@ function installForTarget(tempDir, target) {
   console.log(`  ✓ Installed to ${target.path}`);
 }
 
+function uninstallForTarget(tempDir, target) {
+  if (!fs.existsSync(target.path)) {
+    console.log(`  Nothing to uninstall at ${target.path}`);
+    return;
+  }
+
+  const manifest = readInstallManifest(target.path);
+  const skillNames = manifest?.skillNames || getRepoSkillNames(tempDir);
+  let removedCount = 0;
+
+  for (const name of skillNames) {
+    const full = path.join(target.path, name);
+    if (!fs.existsSync(full)) {
+      continue;
+    }
+    removeRecursiveSync(full);
+    removedCount += 1;
+  }
+
+  if (manifest?.docsInstalled) {
+    const docsPath = path.join(target.path, "docs");
+    if (fs.existsSync(docsPath)) {
+      removeRecursiveSync(docsPath);
+    }
+  }
+
+  const manifestPath = getManifestPath(target.path);
+  if (fs.existsSync(manifestPath)) {
+    fs.unlinkSync(manifestPath);
+  }
+
+  console.log(`  ✓ Removed ${removedCount} skill(s) from ${target.path}`);
+}
+
 function main() {
   const opts = parseArgs();
-  const { tagArg, versionArg } = opts;
+  const { action, tagArg, versionArg } = opts;
 
   if (opts.help) {
     printHelp();
@@ -250,12 +348,15 @@ function main() {
     process.exit(1);
   }
 
-  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "ag-skills-"));
+  const needsRepo = action === "install" || targets.some((target) => !readInstallManifest(target.path));
+  const tempDir = needsRepo ? fs.mkdtempSync(path.join(os.tmpdir(), "ag-skills-")) : null;
   const originalCwd = process.cwd();
 
   try {
-    console.log("Cloning repository…");
-    run("git", ["clone", REPO, tempDir]);
+    if (needsRepo) {
+      console.log("Cloning repository…");
+      run("git", ["clone", REPO, tempDir]);
+    }
 
     const ref =
       tagArg ||
@@ -264,30 +365,34 @@ function main() {
           ? versionArg
           : `v${versionArg}`
         : null);
-    if (ref) {
+    if (ref && tempDir) {
       console.log(`Checking out ${ref}…`);
       process.chdir(tempDir);
       run("git", ["checkout", ref]);
       process.chdir(originalCwd);
     }
 
-    console.log(`\nInstalling for ${targets.length} target(s):`);
+    console.log(`\n${action === "uninstall" ? "Uninstalling" : "Installing"} for ${targets.length} target(s):`);
     for (const target of targets) {
       console.log(`\n${target.name}:`);
-      installForTarget(tempDir, target);
+      if (action === "uninstall") {
+        uninstallForTarget(tempDir, target);
+      } else {
+        installForTarget(tempDir, target);
+      }
     }
 
-    console.log(
-      "\nPick a bundle in docs/users/bundles.md and use @skill-name in your AI assistant.",
-    );
+    if (action === "uninstall") {
+      console.log("\nUninstall complete.");
+    } else {
+      console.log(
+        "\nPick a bundle in docs/users/bundles.md and use @skill-name in your AI assistant.",
+      );
+    }
   } finally {
     try {
-      if (fs.existsSync(tempDir)) {
-        if (fs.rmSync) {
-          fs.rmSync(tempDir, { recursive: true, force: true });
-        } else {
-          fs.rmdirSync(tempDir, { recursive: true });
-        }
+      if (tempDir && fs.existsSync(tempDir)) {
+        removeRecursiveSync(tempDir);
       }
     } catch (e) {
       // ignore cleanup errors
@@ -301,7 +406,14 @@ if (require.main === module) {
 
 module.exports = {
   copyRecursiveSync,
+  getRepoSkillNames,
+  getSharedAgentsPath,
+  getTargets,
   installSkillsIntoTarget,
   installForTarget,
+  parseArgs,
+  readInstallManifest,
+  uninstallForTarget,
+  writeInstallManifest,
   main,
 };

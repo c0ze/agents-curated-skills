@@ -8,6 +8,7 @@ const ENABLED_VALUES = new Set(["1", "true", "yes", "on"]);
 const TOOL_SCRIPTS = path.join("tools", "scripts");
 const TOOL_TESTS = path.join(TOOL_SCRIPTS, "tests");
 const LOCAL_TEST_COMMANDS = [
+  [path.join(TOOL_TESTS, "install_cli.test.js")],
   [path.join(TOOL_TESTS, "jetski_gemini_loader.test.js")],
   [path.join(TOOL_TESTS, "npm_package_contents.test.js")],
   [path.join(TOOL_TESTS, "validate_skills_headings.test.js")],

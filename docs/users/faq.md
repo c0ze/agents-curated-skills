@@ -88,7 +88,7 @@ _Always check the Risk label and review the code._
 
 ### Where should I install the skills?
 
-The universal path that works with most tools is `.agent/skills/`.
+The most useful shared home-directory path is `~/.agents/skills/`.
 
 **Using npx:** `npx agents-curated-skills` (or `npx github:c0ze/agents-curated-skills` if you get a 404).
 
@@ -100,10 +100,20 @@ git clone https://github.com/c0ze/agents-curated-skills.git .agent/skills
 
 **Tool-specific paths:**
 
-- Claude Code: `.claude/skills/`
-- Gemini CLI: `.gemini/skills/`
-- Codex CLI: `.codex/skills/`
+- Claude Code: `.claude/skills/` or a symlink to `~/.agents/skills/`
+- Gemini CLI: `.gemini/skills/` or `~/.agents/skills/`
+- Codex CLI: `~/.agents/skills/`
 - Cursor: `.cursor/skills/` or project root
+
+**Shared install example:**
+
+```bash
+npx agents-curated-skills --codex
+ln -s ~/.agents/skills ~/.claude/skills
+ln -s ~/.agents/skills ~/.gemini/skills
+```
+
+Codex's built-in system skills remain under `~/.codex/skills/.system`.
 
 **Claude Code plugin marketplace alternative:**
 
@@ -113,6 +123,20 @@ git clone https://github.com/c0ze/agents-curated-skills.git .agent/skills
 ```
 
 This repository now includes `.claude-plugin/marketplace.json` and `.claude-plugin/plugin.json` so Claude Code can install the same skill tree through the plugin marketplace.
+
+### How do I uninstall a managed install?
+
+Use the built-in uninstall mode:
+
+```bash
+npx agents-curated-skills uninstall --codex
+```
+
+Or remove a custom path directly:
+
+```bash
+npx agents-curated-skills --uninstall --path ~/.agents/skills
+```
 
 ### Does this work with Windows?
 

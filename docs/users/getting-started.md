@@ -30,7 +30,7 @@ You **install the full repo once** (npx or clone); Starter Packs are curated lis
 npx agents-curated-skills
 ```
 
-This clones to `~/.gemini/antigravity/skills` by default. Use `--cursor`, `--claude`, `--gemini`, `--codex`, or `--kiro` to install for a specific tool, or `--path <dir>` for a custom location. Run `npx agents-curated-skills --help` for details.
+This clones to `~/.gemini/antigravity/skills` by default. Use `--cursor`, `--claude`, `--gemini`, `--codex`, or `--kiro` to install for a specific tool, or `--path <dir>` for a custom location. `--codex` installs into the shared `~/.agents/skills` path. Run `npx agents-curated-skills --help` for details.
 
 If you see a 404 error, use: `npx github:c0ze/agents-curated-skills`
 
@@ -98,8 +98,8 @@ Once installed, just talk to your AI naturally.
 | Tool            | Status          | Path                                                                  |
 | :-------------- | :-------------- | :-------------------------------------------------------------------- |
 | **Claude Code** | ✅ Full Support | `.claude/skills/` or install via `/plugin marketplace add c0ze/agents-curated-skills` |
-| **Gemini CLI**  | ✅ Full Support | `.gemini/skills/`                                                     |
-| **Codex CLI**   | ✅ Full Support | `.codex/skills/`                                                      |
+| **Gemini CLI**  | ✅ Full Support | `.gemini/skills/` or `~/.agents/skills/`                              |
+| **Codex CLI**   | ✅ Full Support | `~/.agents/skills/`                                                   |
 | **Kiro CLI**    | ✅ Full Support | Global: `~/.kiro/skills/` · Workspace: `.kiro/skills/`                |
 | **Kiro IDE**    | ✅ Full Support | Global: `~/.kiro/skills/` · Workspace: `.kiro/skills/`                |
 | **Antigravity** | ✅ Native       | Global: `~/.gemini/antigravity/skills/` · Workspace: `.agent/skills/` |
@@ -131,6 +131,30 @@ If you prefer Claude Code's plugin marketplace flow instead of copying into `.cl
 ```text
 /plugin marketplace add c0ze/agents-curated-skills
 /plugin install agents-curated-skills
+```
+
+**Q: How do I keep one shared install for Codex, Gemini, and Claude?**
+A: Install once into `~/.agents/skills` and point the other tools there:
+
+```bash
+npx agents-curated-skills --codex
+ln -s ~/.agents/skills ~/.claude/skills
+ln -s ~/.agents/skills ~/.gemini/skills
+```
+
+Codex's built-in system skills stay under `~/.codex/skills/.system`; this installer only manages the shared user skills tree.
+
+**Q: How do I uninstall it?**
+A: Use the built-in uninstall mode:
+
+```bash
+npx agents-curated-skills uninstall --codex
+```
+
+For a custom directory:
+
+```bash
+npx agents-curated-skills --uninstall --path ~/.agents/skills
 ```
 
 **Q: Do I need to install every skill?**

@@ -127,8 +127,8 @@ Aggiunta tabella con percorsi di installazione per ogni strumento:
 | Tool            | Type      | Compatibility | Installation Path   |
 | --------------- | --------- | ------------- | ------------------- |
 | Claude Code     | CLI       | ✅ Full       | `.claude/skills/`   |
-| Gemini CLI      | CLI       | ✅ Full       | `.gemini/skills/`   |
-| Codex CLI       | CLI       | ✅ Full       | `.codex/skills/`    |
+| Gemini CLI      | CLI       | ✅ Full       | `.gemini/skills/` or `~/.agents/skills/` |
+| Codex CLI       | CLI       | ✅ Full       | `~/.agents/skills/` |
 | Antigravity IDE | IDE       | ✅ Full       | `.agent/skills/`    |
 | Cursor          | IDE       | ✅ Full       | `.cursor/skills/`   |
 | GitHub Copilot  | Extension | ⚠️ Partial    | `.github/copilot/`  |

@@ -100,9 +100,9 @@ These skills follow the universal **SKILL.md** format and work with any AI codin
 
 | Tool            | Type | Invocation Example                | Path                                                                  |
 | :-------------- | :--- | :-------------------------------- | :-------------------------------------------------------------------- |
-| **Claude Code** | CLI  | `>> /skill-name help me...`       | `.claude/skills/`                                                     |
-| **Gemini CLI**  | CLI  | `(User Prompt) Use skill-name...` | `.gemini/skills/`                                                     |
-| **Codex CLI**   | CLI  | `(User Prompt) Use skill-name...` | `.codex/skills/`                                                      |
+| **Claude Code** | CLI  | `>> /skill-name help me...`       | `.claude/skills/` or symlink to `~/.agents/skills/`                   |
+| **Gemini CLI**  | CLI  | `(User Prompt) Use skill-name...` | `.gemini/skills/` or `~/.agents/skills/`                              |
+| **Codex CLI**   | CLI  | `(User Prompt) Use skill-name...` | `~/.agents/skills/`                                                   |
 | **Kiro CLI**    | CLI  | `(Auto) Skills load on-demand`    | Global: `~/.kiro/skills/` · Workspace: `.kiro/skills/`                |
 | **Kiro IDE**    | IDE  | `/skill-name or (Auto)`           | Global: `~/.kiro/skills/` · Workspace: `.kiro/skills/`                |
 | **Antigravity** | IDE  | `(Agent Mode) Use skill...`       | Global: `~/.gemini/antigravity/skills/` · Workspace: `.agent/skills/` |
@@ -117,6 +117,9 @@ These skills follow the universal **SKILL.md** format and work with any AI codin
 
 > [!TIP]
 > **Windows Users**: use the standard install commands. The legacy `core.symlinks=true` / Developer Mode workaround is no longer required for this repository.
+
+> [!TIP]
+> **Shared install path**: `~/.agents/skills` is the recommended shared home-directory location for Codex and works as a shared skills directory for Gemini too. If you want one copy for Claude, symlink `~/.claude/skills` to `~/.agents/skills`.
 
 ## Installation
 
@@ -168,6 +171,32 @@ This installs the same repository-backed skill library through Claude Code's plu
 | OpenCode       | `npx agents-curated-skills --path .agents/skills` | `opencode run @brainstorming help me plan a feature` |
 | AdaL CLI       | `npx agents-curated-skills --path .adal/skills`   | `Use brainstorming to plan a feature`                |
 | Custom path    | `npx agents-curated-skills --path ./my-skills`    | Depends on your tool                                 |
+
+### Shared Setup
+
+Install once into the shared Codex-friendly path:
+
+```bash
+npx agents-curated-skills --codex
+```
+
+Optionally point Claude and Gemini at the same tree:
+
+```bash
+ln -s ~/.agents/skills ~/.claude/skills
+ln -s ~/.agents/skills ~/.gemini/skills
+```
+
+### Uninstall
+
+Remove a managed install with either syntax:
+
+```bash
+npx agents-curated-skills uninstall --codex
+npx agents-curated-skills --uninstall --path ~/.agents/skills
+```
+
+Uninstall removes the skills tracked by this installer. It does not remove Codex's built-in `.system` skills.
 
 ## Security Posture
 

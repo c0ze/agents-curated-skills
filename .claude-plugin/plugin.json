@@ -1,6 +1,6 @@
 {
   "name": "agents-curated-skills",
-  "version": "7.7.0",
+  "version": "7.9.2",
   "description": "Curated agentic skill library for Claude Code across coding, security, design, product, and operations workflows.",
   "author": {
     "name": "c0ze and contributors",

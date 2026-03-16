@@ -1,4 +1,4 @@
-# Getting Started with Antigravity Awesome Skills (V7.9.1)
+# Getting Started with Agents Curated Skills (V7.9.1)
 
 **New here? This guide will help you supercharge your AI Agent in 5 minutes.**
 
@@ -27,18 +27,18 @@ You **install the full repo once** (npx or clone); Starter Packs are curated lis
 **Option A — npx (easiest):**
 
 ```bash
-npx antigravity-awesome-skills
+npx agents-curated-skills
 ```
 
-This clones to `~/.gemini/antigravity/skills` by default. Use `--cursor`, `--claude`, `--gemini`, `--codex`, or `--kiro` to install for a specific tool, or `--path <dir>` for a custom location. Run `npx antigravity-awesome-skills --help` for details.
+This clones to `~/.gemini/antigravity/skills` by default. Use `--cursor`, `--claude`, `--gemini`, `--codex`, or `--kiro` to install for a specific tool, or `--path <dir>` for a custom location. Run `npx agents-curated-skills --help` for details.
 
-If you see a 404 error, use: `npx github:sickn33/antigravity-awesome-skills`
+If you see a 404 error, use: `npx github:c0ze/agents-curated-skills`
 
 **Option B — git clone:**
 
 ```bash
 # Universal (works for most agents)
-git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skills
+git clone https://github.com/c0ze/agents-curated-skills.git .agent/skills
 ```
 
 ### 2. Pick Your Persona
@@ -97,7 +97,7 @@ Once installed, just talk to your AI naturally.
 
 | Tool            | Status          | Path                                                                  |
 | :-------------- | :-------------- | :-------------------------------------------------------------------- |
-| **Claude Code** | ✅ Full Support | `.claude/skills/` or install via `/plugin marketplace add sickn33/antigravity-awesome-skills` |
+| **Claude Code** | ✅ Full Support | `.claude/skills/` or install via `/plugin marketplace add c0ze/agents-curated-skills` |
 | **Gemini CLI**  | ✅ Full Support | `.gemini/skills/`                                                     |
 | **Codex CLI**   | ✅ Full Support | `.codex/skills/`                                                      |
 | **Kiro CLI**    | ✅ Full Support | Global: `~/.kiro/skills/` · Workspace: `.kiro/skills/`                |
@@ -129,8 +129,8 @@ _Check the [Skill Catalog](../../CATALOG.md) for the full list._
 If you prefer Claude Code's plugin marketplace flow instead of copying into `.claude/skills/`, use:
 
 ```text
-/plugin marketplace add sickn33/antigravity-awesome-skills
-/plugin install antigravity-awesome-skills
+/plugin marketplace add c0ze/agents-curated-skills
+/plugin install agents-curated-skills
 ```
 
 **Q: Do I need to install every skill?**
@@ -140,7 +140,7 @@ A: You clone the whole repo once; your AI only _reads_ the skills you invoke (or
 A: Yes! Use the **@skill-creator** skill to build your own.
 
 **Q: What if Antigravity on Windows gets stuck in a truncation crash loop?**
-A: Follow the recovery steps in [windows-truncation-recovery.md](windows-truncation-recovery.md). It explains which Antigravity storage folders to back up and clear, and includes an optional batch helper adapted from [issue #274](https://github.com/sickn33/antigravity-awesome-skills/issues/274).
+A: Follow the recovery steps in [windows-truncation-recovery.md](windows-truncation-recovery.md). It explains which Antigravity storage folders to back up and clear, and includes an optional batch helper adapted from [issue #274](https://github.com/c0ze/agents-curated-skills/issues/274).
 
 **Q: Is this free?**
 A: Yes, MIT License. Open Source forever.

@@ -28,7 +28,7 @@
 ## Repository Structure (Visual)
 
 ```
-antigravity-awesome-skills/
+agents-curated-skills/
 │
 ├── 📄 README.md                         ← Overview and quick start
 ├── 📄 CONTRIBUTING.md                  ← Contributor workflow
@@ -184,7 +184,7 @@ antigravity-awesome-skills/
 │ Terminal                                │
 ├─────────────────────────────────────────┤
 │ $ git clone https://github.com/        │
-│   sickn33/antigravity-awesome-skills    │
+│   c0ze/agents-curated-skills    │
 │   .agent/skills                         │
 │                                         │
 │ ✓ Cloning into '.agent/skills'...      │

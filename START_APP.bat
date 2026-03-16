@@ -3,7 +3,7 @@ setlocal
 TITLE Antigravity Skills App
 
 echo ===================================================
-echo      Antigravity Awesome Skills - Web App
+echo      Agents Curated Skills - Web App
 echo ===================================================
 
 :: Check for Node.js

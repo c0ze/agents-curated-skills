@@ -12,11 +12,11 @@ const require = createRequire(import.meta.url);
 const { resolveSafeRealPath } = require('../../tools/lib/symlink-safety');
 const ROOT_DIR = path.resolve(__dirname, '..', '..');
 
-const UPSTREAM_REPO = 'https://github.com/sickn33/antigravity-awesome-skills.git';
+const UPSTREAM_REPO = 'https://github.com/c0ze/agents-curated-skills.git';
 const UPSTREAM_NAME = 'upstream';
-const REPO_TAR_URL = 'https://github.com/sickn33/antigravity-awesome-skills/archive/refs/heads/main.tar.gz';
-const REPO_ZIP_URL = 'https://github.com/sickn33/antigravity-awesome-skills/archive/refs/heads/main.zip';
-const COMMITS_API_URL = 'https://api.github.com/repos/sickn33/antigravity-awesome-skills/commits/main';
+const REPO_TAR_URL = 'https://github.com/c0ze/agents-curated-skills/archive/refs/heads/main.tar.gz';
+const REPO_ZIP_URL = 'https://github.com/c0ze/agents-curated-skills/archive/refs/heads/main.zip';
+const COMMITS_API_URL = 'https://api.github.com/repos/c0ze/agents-curated-skills/commits/main';
 const SHA_FILE = path.join(__dirname, '.last-sync-sha');
 
 // ─── Utility helpers ───
@@ -249,7 +249,7 @@ async function syncWithArchive() {
         }
 
         // 3. Move skills to root
-        const extractedRoot = path.join(tempDir, 'antigravity-awesome-skills-main');
+        const extractedRoot = path.join(tempDir, 'agents-curated-skills-main');
         const srcSkills = path.join(extractedRoot, 'skills');
         const srcIndex = path.join(extractedRoot, 'skills_index.json');
         const destSkills = path.join(ROOT_DIR, 'skills');

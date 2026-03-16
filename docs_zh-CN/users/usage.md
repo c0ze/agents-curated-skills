@@ -10,7 +10,7 @@
 
 ### 您刚刚做了什么
 
-当您运行`npx antigravity-awesome-skills`或克隆仓库时，您：
+当您运行`npx agents-curated-skills`或克隆仓库时，您：
 
 ✅ **下载了1,204+个技能文件**到您的计算机（默认：`~/.gemini/antigravity/skills/`；如果使用`--path`则是`~/.agent/skills/`）  
 ✅ **使它们对您的AI助手可用**  
@@ -217,7 +217,7 @@ AI："正在使用Security Audit技能进行审核...
 ls ~/.gemini/antigravity/skills/  # 或您的自定义路径
 
 # 重新安装
-npx antigravity-awesome-skills --path ~/.agent/skills
+npx agents-curated-skills --path ~/.agent/skills
 ```
 
 ### 问题2：技能效果不理想
@@ -364,8 +364,8 @@ A: 可以，参见贡献指南
 
 - 📋 [常见问题](faq.md) - 更多答疑
 - 🎯 [技能包指南](bundles.md) - 发现更多技能
-- 👥 [GitHub讨论](https://github.com/sickn33/antigravity-awesome-skills/discussions) - 与用户交流
-- 🐛 [问题报告](https://github.com/sickn33/antigravity-awesome-skills/issues) - 报告问题
+- 👥 [GitHub讨论](https://github.com/c0ze/agents-curated-skills/discussions) - 与用户交流
+- 🐛 [问题报告](https://github.com/c0ze/agents-curated-skills/issues) - 报告问题
 
 ---
 
@@ -381,7 +381,7 @@ A: 可以，参见贡献指南
 **下一步：**
 - 🎯 探索[技能包](bundles.md)发现更多专业技能组合
 - 🔧 配置[本地环境](local-config.md)优化体验
-- 🤝 加入[社区](https://github.com/sickn33/antigravity-awesome-skills/discussions)与其他用户交流
+- 🤝 加入[社区](https://github.com/c0ze/agents-curated-skills/discussions)与其他用户交流
 
 **开始您的技能之旅：**
 

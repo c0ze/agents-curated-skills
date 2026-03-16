@@ -1,6 +1,6 @@
 # ❓ 常见问题解答 (FAQ)
 
-**有疑问？** 您不是一个人！以下是关于Antigravity Awesome Skills最常见问题的答案。
+**有疑问？** 您不是一个人！以下是关于Agents Curated Skills最常见问题的答案。
 
 ---
 
@@ -51,12 +51,12 @@
 
 **选项1 - npx（推荐）：**
 ```bash
-npx antigravity-awesome-skills
+npx agents-curated-skills
 ```
 
 **选项2 - git克隆：**
 ```bash
-git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skills
+git clone https://github.com/c0ze/agents-curated-skills.git .agent/skills
 ```
 
 详细说明请参见[入门指南](getting-started.md)。
@@ -69,7 +69,7 @@ git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skill
 
 **自定义位置：**
 ```bash
-npx antigravity-awesome-skills --path /custom/path/skills
+npx agents-curated-skills --path /custom/path/skills
 ```
 
 ### Windows用户需要特殊设置吗？
@@ -79,7 +79,7 @@ npx antigravity-awesome-skills --path /custom/path/skills
 1. **启用开发者模式**或以管理员身份运行
 2. **使用正确的克隆命令：**
 ```bash
-git clone -c core.symlinks=true https://github.com/sickn33/antigravity-awesome-skills.git .agent/skills
+git clone -c core.symlinks=true https://github.com/c0ze/agents-curated-skills.git .agent/skills
 ```
 
 ### 如何更新技能？
@@ -91,7 +91,7 @@ git pull
 
 或重新运行安装程序：
 ```bash
-npx antigravity-awesome-skills
+npx agents-curated-skills
 ```
 
 ---
@@ -208,13 +208,13 @@ cd ~/.gemini/antigravity/skills
 git pull
 
 # 或重新安装
-npx antigravity-awesome-skills
+npx agents-curated-skills
 ```
 
 ### 如何报告技能问题？
 
 **报告步骤：**
-1. 在GitHub上创建[issue](https://github.com/sickn33/antigravity-awesome-skills/issues)
+1. 在GitHub上创建[issue](https://github.com/c0ze/agents-curated-skills/issues)
 2. 详细描述问题
 3. 提供示例
 4. 标明技能名称
@@ -310,7 +310,7 @@ npx antigravity-awesome-skills
 
 **报告安全问题：**
 - 📧 security@antigravity-skills.org
-- 🔒 [私有报告](https://github.com/sickn33/antigravity-awesome-skills/security/advisories)
+- 🔒 [私有报告](https://github.com/c0ze/agents-curated-skills/security/advisories)
 
 ### 企业环境可以使用吗？
 
@@ -326,10 +326,10 @@ npx antigravity-awesome-skills
 
 ### 社区资源
 
-- 📋 [GitHub讨论](https://github.com/sickn33/antigravity-awesome-skills/discussions) - 与用户交流
-- 🐛 [问题报告](https://github.com/sickn33/antigravity-awesome-skills/issues) - 报告bug
-- 💡 [功能建议](https://github.com/sickn33/antigravity-awesome-skills/issues/new?template=feature_request.md) - 建议改进
-- 📖 [完整文档](https://github.com/sickn33/antigravity-awesome-skills/tree/main/docs) - 深入学习
+- 📋 [GitHub讨论](https://github.com/c0ze/agents-curated-skills/discussions) - 与用户交流
+- 🐛 [问题报告](https://github.com/c0ze/agents-curated-skills/issues) - 报告bug
+- 💡 [功能建议](https://github.com/c0ze/agents-curated-skills/issues/new?template=feature_request.md) - 建议改进
+- 📖 [完整文档](https://github.com/c0ze/agents-curated-skills/tree/main/docs) - 深入学习
 
 ### 联系方式
 

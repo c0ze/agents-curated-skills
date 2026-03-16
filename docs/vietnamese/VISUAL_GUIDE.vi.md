@@ -28,7 +28,7 @@
 ## 📦 Cấu trúc Repository (Trực quan)
 
 ```
-antigravity-awesome-skills/
+agents-curated-skills/
 │
 ├── 📄 README.md                    ← Tổng quan & danh sách skill
 ├── 📄 CONTRIBUTING.md              ← Cách thức đóng góp
@@ -181,7 +181,7 @@ antigravity-awesome-skills/
 │ Terminal                                │
 ├─────────────────────────────────────────┤
 │ $ git clone https://github.com/        │
-│   sickn33/antigravity-awesome-skills    │
+│   c0ze/agents-curated-skills    │
 │   .agent/skills                         │
 │                                         │
 │ ✓ Đang sao chép vào '.agent/skills'... │

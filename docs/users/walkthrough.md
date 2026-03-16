@@ -80,7 +80,7 @@ Added a precise category table in the README and reduced top-level clutter by mo
 
 ## Obiettivo
 
-Ottimizzare il posizionamento SEO del repository `antigravity-awesome-skills` per apparire nelle ricerche di tutti i principali strumenti di AI coding.
+Ottimizzare il posizionamento SEO del repository `agents-curated-skills` per apparire nelle ricerche di tutti i principali strumenti di AI coding.
 
 ## Strumenti Target
 
@@ -101,13 +101,13 @@ Ottimizzare il posizionamento SEO del repository `antigravity-awesome-skills` pe
 **Prima:**
 
 ```
-# 🌌 Antigravity Awesome Skills: The Ultimate Claude Code Skills Collection
+# 🌌 Agents Curated Skills: The Ultimate Claude Code Skills Collection
 ```
 
 **Dopo:**
 
 ```
-# 🌌 Antigravity Awesome Skills: 130+ Agentic Skills for Claude Code, Gemini CLI, Cursor, Copilot & More
+# 🌌 Agents Curated Skills: 130+ Agentic Skills for Claude Code, Gemini CLI, Cursor, Copilot & More
 ```
 
 ### 2. Badge Aggiunti (7 totali)
@@ -157,7 +157,7 @@ Claude Code, Gemini CLI, Codex CLI, Antigravity IDE, GitHub Copilot, Cursor, Ope
 
 ## GitHub Topics (Azione Manuale)
 
-Vai su https://github.com/sickn33/antigravity-awesome-skills e aggiungi questi topics:
+Vai su https://github.com/c0ze/agents-curated-skills e aggiungi questi topics:
 
 ```text
 claude-code, gemini-cli, codex-cli, antigravity, cursor, github-copilot, opencode,

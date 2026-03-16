@@ -1,6 +1,6 @@
 # Frequently Asked Questions (FAQ)
 
-**Got questions?** You're not alone! Here are answers to the most common questions about Antigravity Awesome Skills.
+**Got questions?** You're not alone! Here are answers to the most common questions about Agents Curated Skills.
 
 ---
 
@@ -90,12 +90,12 @@ _Always check the Risk label and review the code._
 
 The universal path that works with most tools is `.agent/skills/`.
 
-**Using npx:** `npx antigravity-awesome-skills` (or `npx github:sickn33/antigravity-awesome-skills` if you get a 404).
+**Using npx:** `npx agents-curated-skills` (or `npx github:c0ze/agents-curated-skills` if you get a 404).
 
 **Using git clone:**
 
 ```bash
-git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skills
+git clone https://github.com/c0ze/agents-curated-skills.git .agent/skills
 ```
 
 **Tool-specific paths:**
@@ -108,8 +108,8 @@ git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skill
 **Claude Code plugin marketplace alternative:**
 
 ```text
-/plugin marketplace add sickn33/antigravity-awesome-skills
-/plugin install antigravity-awesome-skills
+/plugin marketplace add c0ze/agents-curated-skills
+/plugin install agents-curated-skills
 ```
 
 This repository now includes `.claude-plugin/marketplace.json` and `.claude-plugin/plugin.json` so Claude Code can install the same skill tree through the plugin marketplace.
@@ -119,10 +119,10 @@ This repository now includes `.claude-plugin/marketplace.json` and `.claude-plug
 **Yes.** Use the standard install flow:
 
 ```bash
-git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skills
+git clone https://github.com/c0ze/agents-curated-skills.git .agent/skills
 ```
 
-If you have an older clone created around the removed symlink workaround, reinstall into a fresh directory or rerun `npx antigravity-awesome-skills`.
+If you have an older clone created around the removed symlink workaround, reinstall into a fresh directory or rerun `npx agents-curated-skills`.
 
 ### I hit a truncation or context crash loop on Windows. How do I recover?
 
@@ -138,7 +138,7 @@ It includes:
 
 - the manual cleanup steps for broken Local Storage / Session Storage / IndexedDB state
 - the default Antigravity Windows paths to back up first
-- an optional batch script adapted from [issue #274](https://github.com/sickn33/antigravity-awesome-skills/issues/274)
+- an optional batch script adapted from [issue #274](https://github.com/c0ze/agents-curated-skills/issues/274)
 
 ### How do I update skills?
 
@@ -191,7 +191,7 @@ Use the `@` symbol followed by the skill name:
 
 ### A skill gives incorrect or outdated advice
 
-Please [Open an issue](https://github.com/sickn33/antigravity-awesome-skills/issues)!
+Please [Open an issue](https://github.com/c0ze/agents-curated-skills/issues)!
 Include:
 
 - Which skill
@@ -250,4 +250,4 @@ Common fixes:
 - Try `@test-driven-development` for better code quality
 - Explore `@skill-creator` to make your own skills
 
-**Still confused?** [Open a discussion](https://github.com/sickn33/antigravity-awesome-skills/discussions) and we'll help you out! 🙌
+**Still confused?** [Open a discussion](https://github.com/c0ze/agents-curated-skills/discussions) and we'll help you out! 🙌

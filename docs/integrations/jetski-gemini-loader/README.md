@@ -1,6 +1,6 @@
 # Jetski + Gemini Lazy Skill Loader (Example)
 
-This example shows one way to integrate **antigravity-awesome-skills** with a Jetski/Cortex‑style agent using **lazy loading** based on `@skill-id` mentions, instead of concatenating every `SKILL.md` into the prompt.
+This example shows one way to integrate **agents-curated-skills** with a Jetski/Cortex‑style agent using **lazy loading** based on `@skill-id` mentions, instead of concatenating every `SKILL.md` into the prompt.
 
 > This is **not** a production‑ready library – it is a minimal reference you can adapt to your own host/agent implementation.
 
@@ -47,7 +47,7 @@ import {
   Message,
 } from "./loader";
 
-const REPO_ROOT = "/path/to/antigravity-awesome-skills";
+const REPO_ROOT = "/path/to/agents-curated-skills";
 const SKILLS_ROOT = REPO_ROOT;
 const INDEX_PATH = path.join(REPO_ROOT, "data", "skills_index.json");
 

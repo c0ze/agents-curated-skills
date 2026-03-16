@@ -15,7 +15,7 @@
 
 ## 如何使用工作流
 
-1. 安装一次仓库（`npx antigravity-awesome-skills`）。
+1. 安装一次仓库（`npx agents-curated-skills`）。
 2. 选择符合您即时目标的工作流。
 3. 按顺序执行步骤，并在每个步骤中调用的列出的技能。
 4. 在每个步骤保留输出成果（计划、决策、测试、验证证据）。
@@ -466,7 +466,7 @@ A: 部分步骤可以并行，但需确保依赖关系。
 - 📋 [技能包](bundles.md) - 按角色选择技能
 - 📖 [使用指南](usage.md) - 详细使用说明
 - ❓ [常见问题](faq.md) - 答疑解惑
-- 🤝 [社区讨论](https://github.com/sickn33/antigravity-awesome-skills/discussions) - 经验分享
+- 🤝 [社区讨论](https://github.com/c0ze/agents-curated-skills/discussions) - 经验分享
 
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: Jetski/Cortex + Gemini Integration Guide
-description: "Come usare antigravity-awesome-skills con Jetski/Cortex evitando l’overflow di contesto con 1.200+ skill."
+description: "Come usare agents-curated-skills con Jetski/Cortex evitando l’overflow di contesto con 1.200+ skill."
 ---
 
 # Jetski/Cortex + Gemini: integrazione sicura con 1.200+ skill
 
-Questa guida mostra come integrare il repository `antigravity-awesome-skills` con un agente basato su **Jetski/Cortex + Gemini** (o framework simili) **senza superare il context window** del modello.
+Questa guida mostra come integrare il repository `agents-curated-skills` con un agente basato su **Jetski/Cortex + Gemini** (o framework simili) **senza superare il context window** del modello.
 
 L’errore tipico visto in Jetski/Cortex è:
 
@@ -269,4 +269,4 @@ Per evitare che il problema si ripresenti:
 - Caricate le skill **on‑demand** in base a `@skill-id`.
 - Impostate limiti chiari (max skill per turno, soglia di token).
 
-Seguendo questo pattern, Jetski/Cortex + Gemini può usare l’intera libreria di `antigravity-awesome-skills` in modo sicuro, scalabile e compatibile con il context window dei modelli moderni.
+Seguendo questo pattern, Jetski/Cortex + Gemini può usare l’intera libreria di `agents-curated-skills` in modo sicuro, scalabile e compatibile con il context window dei modelli moderni.

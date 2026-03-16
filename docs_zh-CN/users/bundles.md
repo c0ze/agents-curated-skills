@@ -7,9 +7,9 @@
 1. **安装仓库：**
 
    ```bash
-   npx antigravity-awesome-skills
+   npx agents-curated-skills
    # 或手动克隆
-   git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skills
+   git clone https://github.com/c0ze/agents-curated-skills.git .agent/skills
    ```
 
 2. **从下面列表中**根据您的角色或兴趣**选择您的包**。
@@ -320,7 +320,7 @@ A: 您可以基于现有包创建自己的技能组合。
 - 📖 [完整使用指南](usage.md) - 详细使用说明
 - ❓ [常见问题](faq.md) - 更多答疑
 - 🎯 [工作流指南](workflows.md) - 步骤化工作流
-- 🤝 [社区讨论](https://github.com/sickn33/antigravity-awesome-skills/discussions) - 与其他用户交流
+- 🤝 [社区讨论](https://github.com/c0ze/agents-curated-skills/discussions) - 与其他用户交流
 
 ---
 

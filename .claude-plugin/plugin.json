@@ -1,13 +1,13 @@
 {
-  "name": "antigravity-awesome-skills",
+  "name": "agents-curated-skills",
   "version": "7.7.0",
-  "description": "Universal agentic skill library for Claude Code with 1,254+ reusable skills across coding, security, design, product, and operations workflows.",
+  "description": "Curated agentic skill library for Claude Code across coding, security, design, product, and operations workflows.",
   "author": {
-    "name": "sickn33 and contributors",
-    "url": "https://github.com/sickn33/antigravity-awesome-skills"
+    "name": "c0ze and contributors",
+    "url": "https://github.com/c0ze/agents-curated-skills"
   },
-  "homepage": "https://github.com/sickn33/antigravity-awesome-skills",
-  "repository": "https://github.com/sickn33/antigravity-awesome-skills",
+  "homepage": "https://github.com/c0ze/agents-curated-skills",
+  "repository": "https://github.com/c0ze/agents-curated-skills",
   "license": "MIT",
   "keywords": [
     "claude-code",

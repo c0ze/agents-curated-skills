@@ -6,7 +6,7 @@ const fs = require("fs");
 const os = require("os");
 const { resolveSafeRealPath } = require("../lib/symlink-safety");
 
-const REPO = "https://github.com/sickn33/antigravity-awesome-skills.git";
+const REPO = "https://github.com/c0ze/agents-curated-skills.git";
 const HOME = process.env.HOME || process.env.USERPROFILE || "";
 
 function resolveDir(p) {
@@ -116,9 +116,9 @@ function getTargets(opts) {
 
 function printHelp() {
   console.log(`
-antigravity-awesome-skills — installer
+agents-curated-skills — installer
 
-  npx antigravity-awesome-skills [install] [options]
+  npx agents-curated-skills [install] [options]
 
   Clones the skills repo into your agent's skills directory.
 
@@ -134,13 +134,13 @@ Options:
   --tag <tag>      After clone, checkout this tag (e.g. v4.6.0)
 
 Examples:
-  npx antigravity-awesome-skills
-  npx antigravity-awesome-skills --cursor
-  npx antigravity-awesome-skills --kiro
-  npx antigravity-awesome-skills --antigravity
-  npx antigravity-awesome-skills --version 4.6.0
-  npx antigravity-awesome-skills --path ./my-skills
-  npx antigravity-awesome-skills --claude --codex    Install to multiple targets
+  npx agents-curated-skills
+  npx agents-curated-skills --cursor
+  npx agents-curated-skills --kiro
+  npx agents-curated-skills --antigravity
+  npx agents-curated-skills --version 4.6.0
+  npx agents-curated-skills --path ./my-skills
+  npx agents-curated-skills --claude --codex    Install to multiple targets
 `);
 }
 

@@ -1,9 +1,9 @@
-<!-- registry-sync: version=7.9.2; skills=1259; stars=24531; updated_at=2026-03-15T16:51:23+00:00 -->
-# 🌌 Antigravity Awesome Skills: 1,259+ Agentic Skills for Claude Code, Gemini CLI, Cursor, Copilot & More
+<!-- registry-sync: version=7.9.2; skills=232; stars=24531; updated_at=2026-03-15T16:51:23+00:00 -->
+# 🌌 Agents Curated Skills: 232+ Agentic Skills for Claude Code, Gemini CLI, Cursor, Copilot & More
 
-> **The Ultimate Collection of 1,259+ Universal Agentic Skills for AI Coding Assistants — Claude Code, Gemini CLI, Codex CLI, Antigravity IDE, GitHub Copilot, Cursor, OpenCode, AdaL**
+> **The Ultimate Collection of 232+ Universal Agentic Skills for AI Coding Assistants — Claude Code, Gemini CLI, Codex CLI, Antigravity IDE, GitHub Copilot, Cursor, OpenCode, AdaL**
 
-[![GitHub stars](https://img.shields.io/badge/⭐%2024%2C000%2B%20Stars-gold?style=for-the-badge)](https://github.com/sickn33/antigravity-awesome-skills/stargazers)
+[![GitHub stars](https://img.shields.io/badge/⭐%2024%2C000%2B%20Stars-gold?style=for-the-badge)](https://github.com/c0ze/agents-curated-skills/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Anthropic-purple)](https://claude.ai)
 [![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-Google-blue)](https://github.com/google-gemini/gemini-cli)
@@ -12,13 +12,13 @@
 [![Cursor](https://img.shields.io/badge/Cursor-AI%20IDE-orange)](https://cursor.sh)
 [![Copilot](https://img.shields.io/badge/GitHub%20Copilot-VSCode-lightblue)](https://github.com/features/copilot)
 [![OpenCode](https://img.shields.io/badge/OpenCode-CLI-gray)](https://github.com/opencode-ai/opencode)
-[![Antigravity](https://img.shields.io/badge/Antigravity-DeepMind-red)](https://github.com/sickn33/antigravity-awesome-skills)
+[![Antigravity](https://img.shields.io/badge/Antigravity-DeepMind-red)](https://github.com/c0ze/agents-curated-skills)
 [![AdaL CLI](https://img.shields.io/badge/AdaL%20CLI-SylphAI-pink)](https://sylph.ai/)
 [![ASK Supported](https://img.shields.io/badge/ASK-Supported-blue)](https://github.com/yeasy/ask)
 [![Web App](https://img.shields.io/badge/Web%20App-Browse%20Skills-blue)](apps/web-app)
 [![Buy Me a Book](https://img.shields.io/badge/Buy%20me%20a-book-d13610?logo=buymeacoffee&logoColor=white)](https://buymeacoffee.com/sickn33)
 
-**Antigravity Awesome Skills** is a curated, battle-tested library of **1,259+ high-performance agentic skills** designed to work seamlessly across the major AI coding assistants.
+**Agents Curated Skills** is a curated, battle-tested library of **232+ high-performance agentic skills** designed to work seamlessly across the major AI coding assistants.
 
 **Current release: V7.9.1.** This repository gives your agent reusable playbooks for planning, coding, debugging, testing, security review, infrastructure work, product thinking, and much more.
 
@@ -33,7 +33,7 @@
 - [🎁 Curated Collections (Bundles)](#curated-collections)
 - [🧭 Antigravity Workflows](#antigravity-workflows)
 - [📦 Features & Categories](#features--categories)
-- [📚 Browse 1,259+ Skills](#browse-1259-skills)
+- [📚 Browse 232+ Skills](#browse-232-skills)
 - [🤝 Contributing](#contributing)
 - [💬 Community](#community)
 - [☕ Support the Project](#support-the-project)
@@ -50,7 +50,7 @@
 
 ### 1. 🐣 Context: What is this?
 
-**Antigravity Awesome Skills** (Release 7.9.1) is a broad, production-oriented upgrade to your AI's capabilities.
+**Agents Curated Skills** (Release 7.9.1) is a broad, production-oriented upgrade to your AI's capabilities.
 
 AI Agents (like Claude Code, Cursor, or Gemini) are smart, but they lack **specific tools**. They don't know your company's "Deployment Protocol" or the specific syntax for "AWS CloudFormation".
 **Skills** are small markdown files that teach them how to do these specific tasks perfectly, every time.
@@ -63,7 +63,7 @@ Install once; then use Starter Packs in [docs/users/bundles.md](docs/users/bundl
 
    ```bash
    # Default: ~/.gemini/antigravity/skills (Antigravity global). Use --path for other locations.
-   npx antigravity-awesome-skills
+   npx agents-curated-skills
    ```
 
 2. **Verify**:
@@ -125,7 +125,7 @@ To use these skills with **Claude Code**, **Gemini CLI**, **Codex CLI**, **Kiro 
 ### Option A: npx (recommended)
 
 ```bash
-npx antigravity-awesome-skills
+npx agents-curated-skills
 ```
 
 2. Verify the default install:
@@ -147,8 +147,8 @@ Use @brainstorming to plan a SaaS MVP.
 If you use Claude Code and prefer the plugin marketplace flow, this repository now ships a root `.claude-plugin/marketplace.json`:
 
 ```text
-/plugin marketplace add sickn33/antigravity-awesome-skills
-/plugin install antigravity-awesome-skills
+/plugin marketplace add c0ze/agents-curated-skills
+/plugin install agents-curated-skills
 ```
 
 This installs the same repository-backed skill library through Claude Code's plugin marketplace entrypoint.
@@ -157,17 +157,17 @@ This installs the same repository-backed skill library through Claude Code's plu
 
 | Tool           | Install                                                | First Use                                            |
 | -------------- | ------------------------------------------------------ | ---------------------------------------------------- |
-| Claude Code    | `npx antigravity-awesome-skills --claude` or Claude plugin marketplace | `>> /brainstorming help me plan a feature` |
-| Cursor         | `npx antigravity-awesome-skills --cursor`              | `@brainstorming help me plan a feature`              |
-| Gemini CLI     | `npx antigravity-awesome-skills --gemini`              | `Use brainstorming to plan a feature`                |
-| Codex CLI      | `npx antigravity-awesome-skills --codex`               | `Use brainstorming to plan a feature`                |
-| Antigravity    | `npx antigravity-awesome-skills --antigravity`         | `Use @brainstorming to plan a feature`               |
-| Kiro CLI       | `npx antigravity-awesome-skills --kiro`                | `Use brainstorming to plan a feature`                |
-| Kiro IDE       | `npx antigravity-awesome-skills --path ~/.kiro/skills` | `Use @brainstorming to plan a feature`               |
+| Claude Code    | `npx agents-curated-skills --claude` or Claude plugin marketplace | `>> /brainstorming help me plan a feature` |
+| Cursor         | `npx agents-curated-skills --cursor`              | `@brainstorming help me plan a feature`              |
+| Gemini CLI     | `npx agents-curated-skills --gemini`              | `Use brainstorming to plan a feature`                |
+| Codex CLI      | `npx agents-curated-skills --codex`               | `Use brainstorming to plan a feature`                |
+| Antigravity    | `npx agents-curated-skills --antigravity`         | `Use @brainstorming to plan a feature`               |
+| Kiro CLI       | `npx agents-curated-skills --kiro`                | `Use brainstorming to plan a feature`                |
+| Kiro IDE       | `npx agents-curated-skills --path ~/.kiro/skills` | `Use @brainstorming to plan a feature`               |
 | GitHub Copilot | _No installer — paste skills or rules manually_        | `Ask Copilot to use brainstorming to plan a feature` |
-| OpenCode       | `npx antigravity-awesome-skills --path .agents/skills` | `opencode run @brainstorming help me plan a feature` |
-| AdaL CLI       | `npx antigravity-awesome-skills --path .adal/skills`   | `Use brainstorming to plan a feature`                |
-| Custom path    | `npx antigravity-awesome-skills --path ./my-skills`    | Depends on your tool                                 |
+| OpenCode       | `npx agents-curated-skills --path .agents/skills` | `opencode run @brainstorming help me plan a feature` |
+| AdaL CLI       | `npx agents-curated-skills --path .adal/skills`   | `Use brainstorming to plan a feature`                |
+| Custom path    | `npx agents-curated-skills --path ./my-skills`    | Depends on your tool                                 |
 
 ## Security Posture
 
@@ -303,7 +303,7 @@ The repository is organized into specialized domains to transform your AI into a
 
 Counts change as new skills are added. For the current full registry, see [CATALOG.md](CATALOG.md).
 
-## Browse 1,259+ Skills
+## Browse 232+ Skills
 
 - Open the interactive browser in [`apps/web-app`](apps/web-app).
 - Read the full catalog in [`CATALOG.md`](CATALOG.md).
@@ -327,10 +327,10 @@ Counts change as new skills are added. For the current full registry, see [CATAL
 Use the normal install flow on Windows:
 
 ```bash
-git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skills
+git clone https://github.com/c0ze/agents-curated-skills.git .agent/skills
 ```
 
-If you have an older clone created around the removed symlink workaround, reinstall into a fresh directory or rerun the `npx antigravity-awesome-skills` installer.
+If you have an older clone created around the removed symlink workaround, reinstall into a fresh directory or rerun the `npx agents-curated-skills` installer.
 
 ### Windows truncation or context crash loop
 
@@ -342,7 +342,7 @@ That guide includes:
 
 - backup paths before cleanup
 - the storage folders that usually need to be cleared
-- an optional batch helper adapted from [issue #274](https://github.com/sickn33/antigravity-awesome-skills/issues/274)
+- an optional batch helper adapted from [issue #274](https://github.com/c0ze/agents-curated-skills/issues/274)
 
 ## Web App
 
@@ -357,7 +357,7 @@ npm run app:dev
 
 That will copy the generated skill index into `apps/web-app/public/skills.json`, mirror the current `skills/` tree into `apps/web-app/public/skills/`, and start the Vite development server.
 
-**Hosted online:** The same app is available at [https://sickn33.github.io/antigravity-awesome-skills/](https://sickn33.github.io/antigravity-awesome-skills/) and is deployed automatically on every push to `main`. To enable it once: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+**Hosted online:** The same app is available at [https://c0ze.github.io/agents-curated-skills/](https://c0ze.github.io/agents-curated-skills/) and is deployed automatically on every push to `main`. To enable it once: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
 ## Contributing
 
@@ -368,8 +368,8 @@ That will copy the generated skill index into `apps/web-app/public/skills.json`,
 
 ## Community
 
-- [Discussions](https://github.com/sickn33/antigravity-awesome-skills/discussions) for questions and feedback.
-- [Issues](https://github.com/sickn33/antigravity-awesome-skills/issues) for bugs and improvement requests.
+- [Discussions](https://github.com/c0ze/agents-curated-skills/discussions) for questions and feedback.
+- [Issues](https://github.com/c0ze/agents-curated-skills/issues) for bugs and improvement requests.
 - [`SECURITY.md`](SECURITY.md) for security reporting.
 
 ## Support the Project
@@ -456,11 +456,11 @@ This collection would not be possible without the incredible work of the Claude 
 
 ## Repo Contributors
 
-<a href="https://github.com/sickn33/antigravity-awesome-skills/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=sickn33/antigravity-awesome-skills" alt="Repository contributors" />
+<a href="https://github.com/c0ze/agents-curated-skills/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=c0ze/agents-curated-skills" alt="Repository contributors" />
 </a>
 
-Made with [contrib.rocks](https://contrib.rocks). *(Image may be cached; [view live contributors](https://github.com/sickn33/antigravity-awesome-skills/graphs/contributors) on GitHub.)*
+Made with [contrib.rocks](https://contrib.rocks). *(Image may be cached; [view live contributors](https://github.com/c0ze/agents-curated-skills/graphs/contributors) on GitHub.)*
 
 We officially thank the following contributors for their help in making this repository awesome!
 
@@ -590,8 +590,8 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=sickn33/antigravity-awesome-skills&type=date&legend=top-left)](https://www.star-history.com/#sickn33/antigravity-awesome-skills&type=date&legend=top-left)
+[![Star History Chart](https://api.star-history.com/svg?repos=c0ze/agents-curated-skills&type=date&legend=top-left)](https://www.star-history.com/#c0ze/agents-curated-skills&type=date&legend=top-left)
 
-If Antigravity Awesome Skills has been useful, consider ⭐ starring the repo!
+If Agents Curated Skills has been useful, consider ⭐ starring the repo!
 
 <!-- GitHub Topics (for maintainers): claude-code, gemini-cli, codex-cli, antigravity, cursor, github-copilot, opencode, agentic-skills, ai-coding, llm-tools, ai-agents, autonomous-coding, mcp, ai-developer-tools, ai-pair-programming, vibe-coding, skill, skills, SKILL.md, rules.md, CLAUDE.md, GEMINI.md, CURSOR.md -->

@@ -1,7 +1,7 @@
 {
-  "name": "antigravity-awesome-skills",
+  "name": "agents-curated-skills",
   "version": "7.9.2",
-  "description": "1,259+ agentic skills for Claude Code, Gemini CLI, Cursor, Antigravity & more. Installer CLI.",
+  "description": "Curated agentic skills installer for Claude Code, Gemini CLI, Cursor, Antigravity, and more.",
   "license": "MIT",
   "scripts": {
     "validate": "node tools/scripts/run-python.js tools/scripts/validate_skills.py",
@@ -36,10 +36,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sickn33/antigravity-awesome-skills.git"
+    "url": "git+https://github.com/c0ze/agents-curated-skills.git"
   },
   "bin": {
-    "antigravity-awesome-skills": "tools/bin/install.js"
+    "agents-curated-skills": "tools/bin/install.js"
   },
   "files": [
     "tools/bin",

@@ -15,7 +15,7 @@
 ├─────────────────────────────────────────────────────────────┤
 │                  TRỢ LÝ AI (AI ASSISTANT)                   │
 │                          ↓                                  │
-│              Tải kỹ năng @stripe-integration                │
+│              Tải kỹ năng @paypal-integration                │
 │                          ↓                                  │
 │         Trở thành chuyên gia về thanh toán Stripe           │
 │                          ↓                                  │
@@ -241,13 +241,13 @@ agents-curated-skills/
 │ BƯỚC 2: Tìm đúng Skill                                      │
 ├─────────────────────────────────────────────────────────────┤
 │ Tìm kiếm: "payment" hoặc "stripe"                           │
-│ Tìm thấy: @stripe-integration                               │
+│ Tìm thấy: @paypal-integration                               │
 └─────────────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────────────┐
 │ BƯỚC 3: Gọi lệnh Skill                                      │
 ├─────────────────────────────────────────────────────────────┤
-│ Bạn: @stripe-integration giúp tôi thêm thanh toán định kỳ   │
+│ Bạn: @paypal-integration giúp tôi thêm thanh toán định kỳ   │
 └─────────────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────────────┐
@@ -314,7 +314,7 @@ Mở file skills_index.json → Tìm từ khóa → Tìm đường dẫn đến 
        ↓
 ┌──────────────┐
 │ 4. KIỂM THỬ  │  Sao chép vào .agent/skills/
-└──────┬───────┘  Thử: @docker-mastery
+└──────┬───────┘  Thử: @docker-expert
        │
        ↓
 ┌──────────────┐

@@ -61,8 +61,8 @@ git clone https://github.com/c0ze/agents-curated-skills.git .agent/skills
 
 ```bash
 用户："使用 @react-patterns 构建一个带有身份验证的仪表板组件"
-用户："使用 @security-audit 检查这个Node.js应用"
-用户："使用 @prompt-engineer 为图像生成API优化提示"
+用户："使用 @security-auditor 检查这个Node.js应用"
+用户："使用 @llm-prompt-optimizer 为图像生成API优化提示"
 ```
 
 您的AI会自动加载技能并遵循其指导。
@@ -82,25 +82,25 @@ git clone https://github.com/c0ze/agents-curated-skills.git .agent/skills
 "使用 @react-patterns 构建用户界面"
 
 # 第3步：后端API
-"使用 @api-design 创建RESTful端点"
+"使用 @api-design-principles 创建RESTful端点"
 
 # 第4步：安全审计
-"使用 @security-audit 扫描漏洞"
+"使用 @security-auditor 扫描漏洞"
 
 # 第5步：部署
-"使用 @k8s-deployment 部署到Kubernetes"
+"使用 @kubernetes-architect 部署到Kubernetes"
 ```
 
 ### 技能选择模式
 
 | 场景                   | 推荐技能                                      |
 | :--------------------- | :-------------------------------------------- |
-| **编写文档**           | `@doc-coauthoring`, `@technical-writing`      |
-| **代码审查**           | `@code-reviewer`, `@security-review`          |
-| **性能优化**           | `@performance-analyzer`, `@optimization`       |
-| **调试复杂问题**       | `@debugging`, `@root-cause-tracing`          |
-| **API设计**           | `@api-design`, `@openapi-spec`               |
-| **数据库设计**         | `@schema-design`, `@query-optimization`      |
+| **编写文档**           | `@doc-coauthoring`, `@doc-coauthoring`      |
+| **代码审查**           | `@codebase-audit-pre-push`, `@security-auditor`          |
+| **性能优化**           | `@python-performance-optimization`, `@context-optimization`       |
+| **调试复杂问题**       | `@debugging-strategies`, `@debugging-strategies`          |
+| **API设计**           | `@api-design-principles`, `@api-documenter`               |
+| **数据库设计**         | `@database-design`, `@database-optimizer`      |
 
 ---
 
@@ -111,7 +111,7 @@ git clone https://github.com/c0ze/agents-curated-skills.git .agent/skills
 技能可以组合使用：
 
 ```bash
-"使用 @react-patterns 和 @tailwind-mastery 构建响应式组件，
+"使用 @react-patterns 和 @tailwind-patterns 构建响应式组件，
 然后用 @test-driven-development 编写测试"
 ```
 
@@ -120,7 +120,7 @@ git clone https://github.com/c0ze/agents-curated-skills.git .agent/skills
 为技能提供特定上下文：
 
 ```bash
-"使用 @security-audit 检查这个电商API：
+"使用 @security-auditor 检查这个电商API：
 - 处理支付信息
 - 需要GDPR合规
 - 使用JWT认证"

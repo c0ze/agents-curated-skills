@@ -2,6 +2,7 @@ import os
 import json
 import re
 import sys
+import shutil
 from collections.abc import Mapping
 from datetime import date, datetime
 
@@ -150,3 +151,8 @@ if __name__ == "__main__":
     skills_path = os.path.join(base_dir, "skills")
     output_path = os.path.join(base_dir, "skills_index.json")
     generate_index(skills_path, output_path)
+
+    data_output_path = os.path.join(base_dir, "data", "skills_index.json")
+    os.makedirs(os.path.dirname(data_output_path), exist_ok=True)
+    shutil.copyfile(output_path, data_output_path)
+    print(f"✅ Synced data index at: {data_output_path}")

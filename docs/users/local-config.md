@@ -1,67 +1,39 @@
 # Local Skills Configuration
 
-> **Current Status**: All 96 skills are available in the repository.  
-> **This Document**: Recommends 35 high-priority skills for typical usage.
+> **Current Status**: The generated registry currently contains 231 skills.
+> **This Document**: Recommends 17 high-priority skills that are present in the current registry.
 
-## 📊 Recommended High-Priority Skills (35)
+## 📊 Recommended High-Priority Skills (17)
 
 These are the skills recommended for most common development workflows. All other skills remain available and can be used as needed.
 
-### 🔥 Tier S - Core Development (13 skills)
+### 🔥 Tier S - Core Development (4 skills)
 
 Essential skills used automatically by the agent:
 
-- `systematic-debugging` - Root cause analysis and structured debugging
 - `test-driven-development` - TDD workflow and red-green-refactor
-- `writing-skills` - Documentation and markdown expertise
 - `doc-coauthoring` - Structured technical documentation workflow
-- `planning-with-files` - Implementation plan creation
-- `concise-planning` - Fast planning for small tasks
-- `software-architecture` - Quality-focused design principles
-- `senior-architect` - Scalable system design and architecture
 - `senior-fullstack` - Full-stack development best practices
-- `verification-before-completion` - Pre-completion verification workflow
-- `git-pushing` - Automated staging and conventional commits
-- `address-github-comments` - Systematic code review response workflow
 - `javascript-mastery` - Advanced JavaScript patterns
 
-### ⭐ Tier A - Your Projects (12 skills)
+### ⭐ Tier A - Project Work (10 skills)
 
 Skills actively used for your specific projects:
 
-- `docx-official` (+ symlink `docx`) - Official Anthropic Word manipulation
-- `pdf-official` (+ symlink `pdf`) - Official Anthropic PDF manipulation
-- `pptx-official` (+ symlink `pptx`) - Official Anthropic PowerPoint manipulation
-- `xlsx-official` (+ symlink `xlsx`) - Official Anthropic Excel manipulation
+- `docx` - Word document manipulation
+- `pdf` - PDF manipulation
+- `pptx` - PowerPoint presentation manipulation
+- `xlsx` - Excel spreadsheet manipulation
 - `react-best-practices` - Vercel's 40+ performance optimization rules
-- `web-design-guidelines` - Vercel's 100+ UI/UX audit rules
 - `frontend-dev-guidelines` - Modern React/TS development patterns
 - `webapp-testing` - Local web application testing with Playwright
 - `playwright-skill` - Advanced Playwright automation
 - `mcp-builder` - Model Context Protocol server creation
-- `notebooklm` - Google NotebookLM integration
 - `ui-ux-pro-max` - Advanced design intelligence
 
-### 📢 Marketing & SEO (1 skill)
+### 🤖 AI & Automation (3 skills)
 
-- `content-creator` - SEO-optimized marketing and brand voice
-
-### 🏢 Corporate (4 skills)
-
-- `brand-guidelines-anthropic` - Official Anthropic brand styling
-- `brand-guidelines-community` - Community brand guidelines
-- `internal-comms-anthropic` - Official Anthropic communications
-- `internal-comms-community` - Community communications
-
-### 📝 Planning & Documentation (1 skill)
-
-- `writing-plans` - Strategic planning documentation
-
-### 🤖 AI & Automation (5 skills)
-
-- `workflow-automation` - AI-native workflow automation and API integration
 - `llm-app-patterns` - Design patterns for LLM applications
-- `autonomous-agent-patterns` - Patterns for autonomous agents
 - `prompt-library` - Curated collection of optimized prompts
 - `github-workflow-automation` - GitHub Actions and CI/CD automation
 
@@ -71,13 +43,12 @@ Skills actively used for your specific projects:
 
 ```
 skills/
-├── [96 active skills]     ← All skills available
-└── [4 symlinks]           ← docx, pdf, pptx, xlsx → official versions
+└── [231 active skills]    ← All skills available
 ```
 
 ---
 
-## 📚 Other Available Skills (61)
+## 📚 Other Available Skills
 
 All other skills in the repository are available for use as needed. Some notable categories:
 
@@ -119,7 +90,7 @@ Advanced workflows:
 Product management:
 
 - `app-store-optimization`, `product-manager-toolkit`
-- `prompt-engineering`
+- `llm-prompt-optimizer`
 
 ### Infrastructure (2 skills)
 
@@ -131,22 +102,20 @@ System administration:
 
 Miscellaneous:
 
-- `skill-creator`, `skill-developer`, `core-components`
-- `web-artifacts-builder`, `subagent-driven-development`
-- `dispatching-parallel-agents`, `finishing-a-development-branch`
+- `web-artifacts-builder`, `theme-factory`, `remotion`
 
 ---
 
 ## 🎯 Benefits of This Recommendation
 
-✅ **Focused Guidance** - 35 high-priority skills for common workflows  
-✅ **Full Availability** - All 96 skills accessible when needed  
-✅ **Balanced Coverage** - Core dev + AI/automation + frontend excellence  
+✅ **Focused Guidance** - 17 high-priority skills for common workflows
+✅ **Full Availability** - All 231 skills accessible when needed
+✅ **Balanced Coverage** - Core dev + AI/automation + frontend excellence
 ✅ **Easy Discovery** - Categorized list of all other available skills
 
 ---
 
-**Last Updated**: 2026-01-16  
-**Recommended Skills**: 35 high-priority  
-**Total Available**: 96 skills + 4 symlinks = 100 total  
-**Recent Additions to Recommendations**: `senior-fullstack`, `concise-planning`, `address-github-comments`, `javascript-mastery`, `workflow-automation`, `llm-app-patterns`, `autonomous-agent-patterns`, `prompt-library`
+**Last Updated**: 2026-01-16
+**Recommended Skills**: 17 high-priority
+**Total Available**: 231 skills
+**Recent Additions to Recommendations**: `senior-fullstack`, `javascript-mastery`, `llm-app-patterns`, `prompt-library`

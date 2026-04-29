@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-02-08T00:00:00.000Z",
-  "total": 232,
+  "total": 231,
   "skills": [
     {
       "id": "algorithmic-art",
@@ -5432,31 +5432,6 @@
         "node"
       ],
       "path": "skills/senior-fullstack/SKILL.md"
-    },
-    {
-      "id": "skill-creator",
-      "name": "skill-creator",
-      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for bette...",
-      "category": "testing",
-      "tags": [
-        "skill",
-        "creator"
-      ],
-      "triggers": [
-        "skill",
-        "creator",
-        "new",
-        "skills",
-        "modify",
-        "improve",
-        "existing",
-        "measure",
-        "performance",
-        "users",
-        "want",
-        "scratch"
-      ],
-      "path": "skills/skill-creator/SKILL.md"
     },
     {
       "id": "slack-gif-creator",

@@ -1,114 +1,158 @@
-#!/bin/bash
-# sync_recommended_skills.sh
-# Syncs only the 35 recommended skills from GitHub repo to local central library
+#!/usr/bin/env bash
+# Sync a curated subset of skills into a local assistant skills directory.
 
-set -e
+set -euo pipefail
 
-# Paths
-GITHUB_REPO="/Users/nicco/Antigravity Projects/agents-curated-skills/skills"
-LOCAL_LIBRARY="/Users/nicco/.gemini/antigravity/scratch/.agent/skills"
-BACKUP_DIR="/Users/nicco/.gemini/antigravity/scratch/.agent/skills_backup_$(date +%Y%m%d_%H%M%S)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+SOURCE_SKILLS="${SOURCE_SKILLS:-$REPO_ROOT/skills}"
+HOME_DIR="${HOME:-${USERPROFILE:-}}"
 
-# 35 Recommended Skills
+usage() {
+  cat <<'USAGE'
+Usage: tools/scripts/sync_recommended_skills.sh [--target codex|gemini|claude|shared|PATH] [--source PATH] [--prune]
+
+Defaults:
+  --source  repo skills/ directory
+  --target  shared Codex-friendly directory: ~/.agents/skills
+
+Targets:
+  codex|shared  ~/.agents/skills
+  gemini        ~/.gemini/skills
+  claude        ~/.claude/skills
+
+Options:
+  --prune       After backing up, remove non-recommended skill directories from the target.
+USAGE
+}
+
+resolve_target() {
+  case "$1" in
+    codex|shared)
+      printf '%s/.agents/skills\n' "$HOME_DIR"
+      ;;
+    gemini)
+      printf '%s/.gemini/skills\n' "$HOME_DIR"
+      ;;
+    claude)
+      printf '%s/.claude/skills\n' "$HOME_DIR"
+      ;;
+    *)
+      printf '%s\n' "$1"
+      ;;
+  esac
+}
+
+TARGET_SPEC="${TARGET:-shared}"
+PRUNE=0
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --target)
+      TARGET_SPEC="${2:?Missing value for --target}"
+      shift 2
+      ;;
+    --source)
+      SOURCE_SKILLS="${2:?Missing value for --source}"
+      shift 2
+      ;;
+    --prune)
+      PRUNE=1
+      shift
+      ;;
+    --help|-h)
+      usage
+      exit 0
+      ;;
+    *)
+      echo "Unknown argument: $1" >&2
+      usage >&2
+      exit 2
+      ;;
+  esac
+done
+
+if [[ -z "$HOME_DIR" ]]; then
+  echo "Could not resolve HOME. Pass an absolute path with --target." >&2
+  exit 1
+fi
+
+SOURCE_SKILLS="$(cd "$SOURCE_SKILLS" && pwd)"
+TARGET_DIR="$(resolve_target "$TARGET_SPEC")"
+BACKUP_DIR="${BACKUP_DIR:-$TARGET_DIR.backup.$(date +%Y%m%d_%H%M%S)}"
+
 RECOMMENDED_SKILLS=(
-    # Tier S - Core Development (13)
-    "systematic-debugging"
-    "test-driven-development"
-    "writing-skills"
-    "doc-coauthoring"
-    "planning-with-files"
-    "concise-planning"
-    "software-architecture"
-    "senior-architect"
-    "senior-fullstack"
-    "verification-before-completion"
-    "git-pushing"
-    "address-github-comments"
-    "javascript-mastery"
-    
-    # Tier A - Your Projects (12)
-    "docx-official"
-    "pdf-official"
-    "pptx-official"
-    "xlsx-official"
-    "react-best-practices"
-    "web-design-guidelines"
-    "frontend-dev-guidelines"
-    "webapp-testing"
-    "playwright-skill"
-    "mcp-builder"
-    "notebooklm"
-    "ui-ux-pro-max"
-    
-    # Marketing & SEO (1)
-    "content-creator"
-    
-    # Corporate (4)
-    "brand-guidelines-anthropic"
-    "brand-guidelines-community"
-    "internal-comms-anthropic"
-    "internal-comms-community"
-    
-    # Planning & Documentation (1)
-    "writing-plans"
-    
-    # AI & Automation (5)
-    "workflow-automation"
-    "llm-app-patterns"
-    "autonomous-agent-patterns"
-    "prompt-library"
-    "github-workflow-automation"
+  "test-driven-development"
+  "doc-coauthoring"
+  "senior-fullstack"
+  "javascript-mastery"
+  "docx"
+  "pdf"
+  "pptx"
+  "xlsx"
+  "react-best-practices"
+  "frontend-dev-guidelines"
+  "webapp-testing"
+  "playwright-skill"
+  "mcp-builder"
+  "ui-ux-pro-max"
+  "llm-app-patterns"
+  "prompt-library"
+  "github-workflow-automation"
 )
 
-echo "🔄 Sync Recommended Skills"
-echo "========================="
-echo ""
-echo "📍 Source: $GITHUB_REPO"
-echo "📍 Target: $LOCAL_LIBRARY"
-echo "📊 Skills to sync: ${#RECOMMENDED_SKILLS[@]}"
-echo ""
+echo "Sync recommended skills"
+echo "======================="
+echo
+echo "Source: $SOURCE_SKILLS"
+echo "Target: $TARGET_DIR"
+echo "Skills to sync: ${#RECOMMENDED_SKILLS[@]}"
+echo
 
-# Create backup
-echo "📦 Creating backup at: $BACKUP_DIR"
-cp -r "$LOCAL_LIBRARY" "$BACKUP_DIR"
-echo "✅ Backup created"
-echo ""
+mkdir -p "$TARGET_DIR"
 
-# Clear local library (keep README.md if exists)
-echo "🗑️  Clearing local library..."
-cd "$LOCAL_LIBRARY"
-for item in */; do
-    rm -rf "$item"
-done
-echo "✅ Local library cleared"
-echo ""
+echo "Creating backup: $BACKUP_DIR"
+cp -a "$TARGET_DIR" "$BACKUP_DIR"
+echo "Backup complete"
+echo
 
-# Copy recommended skills
-echo "📋 Copying recommended skills..."
+if [[ "$PRUNE" -eq 1 ]]; then
+  echo "Pruning non-recommended skill directories..."
+  keep_file="$(mktemp)"
+  printf '%s\n' "${RECOMMENDED_SKILLS[@]}" > "$keep_file"
+  find "$TARGET_DIR" -mindepth 1 -maxdepth 1 -type d | while IFS= read -r item; do
+    name="$(basename "$item")"
+    if ! grep -Fxq "$name" "$keep_file"; then
+      rm -rf "$item"
+    fi
+  done
+  rm -f "$keep_file"
+  echo "Prune complete"
+  echo
+fi
+
+echo "Copying recommended skills..."
 SUCCESS_COUNT=0
 MISSING_COUNT=0
 
 for skill in "${RECOMMENDED_SKILLS[@]}"; do
-    if [ -d "$GITHUB_REPO/$skill" ]; then
-        cp -RP "$GITHUB_REPO/$skill" "$LOCAL_LIBRARY/"
-        echo "  ✅ $skill"
-        ((SUCCESS_COUNT++))
-    else
-        echo "  ⚠️  $skill (not found in repo)"
-        ((MISSING_COUNT++))
-    fi
+  if [[ -d "$SOURCE_SKILLS/$skill" ]]; then
+    rm -rf "$TARGET_DIR/$skill"
+    cp -a "$SOURCE_SKILLS/$skill" "$TARGET_DIR/"
+    echo "  copied $skill"
+    SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+  else
+    echo "  missing $skill"
+    MISSING_COUNT=$((MISSING_COUNT + 1))
+  fi
 done
 
-echo ""
-echo "📊 Summary"
-echo "=========="
-echo "✅ Copied: $SUCCESS_COUNT skills"
-echo "⚠️  Missing: $MISSING_COUNT skills"
-echo "📦 Backup: $BACKUP_DIR"
-echo ""
+FINAL_COUNT="$(find "$TARGET_DIR" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')"
 
-# Verify
-FINAL_COUNT=$(find "$LOCAL_LIBRARY" -maxdepth 1 -type d ! -name "." | wc -l | tr -d ' ')
-echo "🎯 Final count in local library: $FINAL_COUNT skills"
-echo ""
-echo "Done! Your local library now has only the recommended skills."
+echo
+echo "Summary"
+echo "======="
+echo "Copied: $SUCCESS_COUNT skills"
+echo "Missing: $MISSING_COUNT skills"
+echo "Backup: $BACKUP_DIR"
+echo "Final target skill directories: $FINAL_COUNT"

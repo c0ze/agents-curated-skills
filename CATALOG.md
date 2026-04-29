@@ -2,7 +2,7 @@
 
 Generated at: 2026-02-08T00:00:00.000Z
 
-Total skills: 232
+Total skills: 231
 
 ## architecture (16)
 
@@ -264,13 +264,12 @@ search for spreadsheets, and view metadata. Use wh... | google, sheets | google,
 | `pci-compliance` | Implement PCI DSS compliance requirements for secure handling of payment card data and payment systems. Use when securing payment processing, achieving PCI c... | pci, compliance | pci, compliance, dss, requirements, secure, handling, payment, card, data, securing, processing, achieving |
 | `security-auditor` | Expert security auditor specializing in DevSecOps, comprehensive cybersecurity, and compliance frameworks. | security, auditor | security, auditor, specializing, devsecops, cybersecurity, compliance, frameworks |
 
-## testing (4)
+## testing (3)
 
 | Skill | Description | Tags | Triggers |
 | --- | --- | --- | --- |
 | `file-path-traversal` | This skill should be used when the user asks to "test for directory traversal", "exploit path traversal vulnerabilities", "read arbitrary files through web a... | file, path, traversal | file, path, traversal, skill, should, used, user, asks, test, directory, exploit, vulnerabilities |
 | `playwright-skill` | Complete browser automation with Playwright. Auto-detects dev servers, writes clean test scripts to /tmp. Test pages, fill forms, take screenshots, check res... | playwright, skill | playwright, skill, complete, browser, automation, auto, detects, dev, servers, writes, clean, test |
-| `skill-creator` | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize a... | skill, creator | skill, creator, new, skills, modify, improve, existing, measure, performance, users, want, scratch |
 | `test-driven-development` | Use when implementing any feature or bugfix, before writing implementation code | driven | driven, test, development, implementing, any, feature, bugfix, before, writing, code |
 
 ## workflow (5)

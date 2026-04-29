@@ -103,14 +103,14 @@ opencode run @skill-name
 
 **✅ 正确方式：**
 ```bash
-用户："使用 @security-audit 检查这个React应用的安全性"
+用户："使用 @security-auditor 检查这个React应用的安全性"
 ```
 → AI会加载security-audit技能并遵循其专门的安全检查清单
 
 ### 完整对话示例
 
 ```bash
-用户："使用 @security-audit 审核这个电商React应用：
+用户："使用 @security-auditor 审核这个电商React应用：
 
 src/components/PaymentForm.tsx
 [组件代码...]
@@ -142,7 +142,7 @@ AI："正在使用Security Audit技能进行审核...
 给技能提供特定背景信息：
 
 ```bash
-"使用 @api-design 设计用户管理API：
+"使用 @api-design-principles 设计用户管理API：
 
 要求：
 - 需要JWT认证
@@ -158,7 +158,7 @@ AI："正在使用Security Audit技能进行审核...
 ```bash
 "使用 @react-patterns 构建用户资料页面，
 然后用 @test-driven-development 编写测试，
-最后用 @performance-analyzer 优化性能"
+最后用 @python-performance-optimization 优化性能"
 ```
 
 ### 3. 迭代优化
@@ -167,10 +167,10 @@ AI："正在使用Security Audit技能进行审核...
 
 ```bash
 # 第一次
-"使用 @prompt-engineer 优化这个提示：'写一个登录页面'"
+"使用 @llm-prompt-optimizer 优化这个提示：'写一个登录页面'"
 
 # 第二次  
-"使用 @prompt-engineer 进一步优化，目标：
+"使用 @llm-prompt-optimizer 进一步优化，目标：
 - 转化率更高
 - 适合移动端
 - 包含错误处理"
@@ -194,14 +194,14 @@ AI："正在使用Security Audit技能进行审核...
 
 | 任务类别 | 常用技能 |
 | :------- | :-------- |
-| **前端开发** | `@react-patterns`, `@tailwind-mastery`, `@frontend-design` |
-| **安全** | `@security-audit`, `@pen-testing`, `@vulnerability-scanner` |
-| **API开发** | `@api-design`, `@openapi-spec`, `@rest-best-practices` |
-| **数据库** | `@schema-design`, `@query-optimization`, `@database-audit` |
-| **部署** | `@docker-expert`, `@k8s-deployment`, `@ci-cd-pipeline` |
-| **文档** | `@doc-coauthoring`, `@technical-writing`, `@api-documentation` |
-| **测试** | `@test-driven-development`, `@testing-patterns`, `@e2e-testing` |
-| **性能** | `@performance-analyzer`, `@optimization`, `@profiling` |
+| **前端开发** | `@react-patterns`, `@tailwind-patterns`, `@frontend-design` |
+| **安全** | `@security-auditor`, `@cloud-penetration-testing`, `@security-auditor` |
+| **API开发** | `@api-design-principles`, `@api-documenter`, `@api-patterns` |
+| **数据库** | `@database-design`, `@database-optimizer`, `@database-optimizer` |
+| **部署** | `@docker-expert`, `@kubernetes-architect`, `@github-workflow-automation` |
+| **文档** | `@doc-coauthoring`, `@doc-coauthoring`, `@api-documenter` |
+| **测试** | `@test-driven-development`, `@test-driven-development`, `@webapp-testing` |
+| **性能** | `@python-performance-optimization`, `@context-optimization`, `@python-performance-optimization` |
 
 ---
 
@@ -227,10 +227,10 @@ npx agents-curated-skills --path ~/.agent/skills
 **解决：**
 ```bash
 # ❌ 模糊请求
-"使用 @api-design 设计API"
+"使用 @api-design-principles 设计API"
 
 # ✅ 具体请求  
-"使用 @api-design 设计用户管理API，需要：
+"使用 @api-design-principles 设计用户管理API，需要：
 - JWT认证
 - 分页支持
 - RESTful设计
@@ -252,7 +252,7 @@ npx agents-curated-skills --path ~/.agent/skills
 **原因：** 可能技能不适合这个具体场景
 
 **解决：**
-1. **尝试更具体的技能**（如用`@sql-injection-testing`而不是`@security-audit`）
+1. **尝试更具体的技能**（如用`@api-fuzzing-bug-bounty`而不是`@security-auditor`）
 2. **组合多个技能**
 3. **提供更多上下文**
 
@@ -266,13 +266,13 @@ npx agents-curated-skills --path ~/.agent/skills
 
 ```bash
 # SaaS项目技能栈
-@react-patterns + @api-design + @security-audit + @docker-expert
+@react-patterns + @api-design-principles + @security-auditor + @docker-expert
 
 # 移动应用技能栈  
-@react-native-patterns + @mobile-testing + @performance-analyzer
+@react-native-architecture + @mobile-developer + @python-performance-optimization
 
 # 数据项目技能栈
-@python-patterns + @data-visualization + @ml-model-development
+@python-patterns + @claude-d3js-skill + @hugging-face-model-trainer
 ```
 
 ### 2. 创建"工作流模板"
@@ -281,10 +281,10 @@ npx agents-curated-skills --path ~/.agent/skills
 
 ```bash
 # 新功能开发模板
-"使用 @brainstorming 设计功能架构 → 使用 @react-patterns 实现前端 → 使用 @api-design 创建后端 → 使用 @test-driven-development 编写测试 → 使用 @performance-analyzer 优化"
+"使用 @brainstorming 设计功能架构 → 使用 @react-patterns 实现前端 → 使用 @api-design-principles 创建后端 → 使用 @test-driven-development 编写测试 → 使用 @python-performance-optimization 优化"
 
 # 安全审计模板  
-"使用 @security-audit 进行初步扫描 → 使用 @vulnerability-scanner 深度检查 → 使用 @pen-testing 渗透测试 → 使用 @incident-response 制定响应计划"
+"使用 @security-auditor 进行初步扫描 → 使用 @security-auditor 深度检查 → 使用 @cloud-penetration-testing 渗透测试 → 使用 @observability-engineer 制定响应计划"
 ```
 
 ### 3. 渐进式复杂度
@@ -315,7 +315,7 @@ npx agents-curated-skills --path ~/.agent/skills
 
 **技能组合：**
 ```bash
-"使用 @brainstorming 设计数据库模式 → 使用 @api-design 快速生成CRUD端点 → 使用 @react-patterns 创建基础UI → 使用 @tailwind-mastery 美化界面"
+"使用 @brainstorming 设计数据库模式 → 使用 @api-design-principles 快速生成CRUD端点 → 使用 @react-patterns 创建基础UI → 使用 @tailwind-patterns 美化界面"
 ```
 
 **结果：** 1.5小时完成功能完整的应用
@@ -326,7 +326,7 @@ npx agents-curated-skills --path ~/.agent/skills
 
 **技能组合：**
 ```bash
-"使用 @security-audit 进行基础检查 → 使用 @vulnerability-scanner 扫描依赖 → 使用 @pen-testing 进行渗透测试 → 使用 @incident-response 制定安全计划"
+"使用 @security-auditor 进行基础检查 → 使用 @security-auditor 扫描依赖 → 使用 @cloud-penetration-testing 进行渗透测试 → 使用 @observability-engineer 制定安全计划"
 ```
 
 **结果：** 发现并修复了17个安全漏洞
@@ -337,7 +337,7 @@ npx agents-curated-skills --path ~/.agent/skills
 
 **技能组合：**
 ```bash
-"使用 @performance-analyzer 识别瓶颈 → 使用 @optimization 优化关键路径 → 使用 @profiling 深度分析 → 使用 @code-simplifier 重写低效代码"
+"使用 @python-performance-optimization 识别瓶颈 → 使用 @context-optimization 优化关键路径 → 使用 @python-performance-optimization 深度分析 → 使用 @code-simplifier 重写低效代码"
 ```
 
 **结果：** 页面加载时间从4.2秒降到1.1秒

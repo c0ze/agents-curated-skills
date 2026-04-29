@@ -96,7 +96,6 @@ Skills for task planning and workflow optimization:
 ### System Extension
 Skills for extending AI capabilities:
 - `@mcp-builder` - Build MCP (Model Context Protocol) servers
-- `@skill-creator` - Create new skills or update existing ones
 - `@writing-skills` - Tools for writing and validating skill files
 - `@dispatching-parallel-agents` - Distribute tasks to multiple agents
 
@@ -142,7 +141,6 @@ See the [main README](../README.md) for the complete list of all 179+ skills org
 Want to create a new skill? Check out:
 1. [CONTRIBUTING.md](../CONTRIBUTING.md) - How to contribute
 2. [docs/contributors/skill-anatomy.md](../docs/contributors/skill-anatomy.md) - Skill structure guide
-3. `@skill-creator` - Use this skill to create new skills!
 
 **Basic structure:**
 ```markdown

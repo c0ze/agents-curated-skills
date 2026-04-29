@@ -482,7 +482,7 @@ Nếu người dùng đang làm việc với Vue:
 ## Các Luồng công việc liên quan
  
 1. Đầu tiên, dùng `@brainstorming` để thiết kế.
-2. Sau đó, dùng `@writing-plans` để lập kế hoạch.
+2. Sau đó, dùng `@doc-coauthoring` để lập kế hoạch.
 3. Cuối cùng, dùng `@test-driven-development` để triển khai.
 ```
 

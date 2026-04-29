@@ -16,9 +16,7 @@
           "title": "Plan the scope",
           "goal": "Convert the idea into a clear implementation plan and milestones.",
           "recommendedSkills": [
-            "brainstorming",
-            "concise-planning",
-            "writing-plans"
+            "brainstorming"
           ],
           "notes": "Define problem, user persona, MVP boundaries, and acceptance criteria before coding."
         },
@@ -28,8 +26,7 @@
           "recommendedSkills": [
             "backend-dev-guidelines",
             "api-patterns",
-            "database-design",
-            "auth-implementation-patterns"
+            "database-design"
           ],
           "notes": "Prefer small vertical slices; keep API contracts explicit and testable."
         },
@@ -48,7 +45,6 @@
           "goal": "Catch regressions and ensure key flows work before release.",
           "recommendedSkills": [
             "test-driven-development",
-            "systematic-debugging",
             "browser-automation",
             "go-playwright"
           ],
@@ -59,8 +55,7 @@
           "goal": "Release with basic observability and rollback readiness.",
           "recommendedSkills": [
             "deployment-procedures",
-            "observability-engineer",
-            "postmortem-writing"
+            "observability-engineer"
           ],
           "notes": "Define release checklist, minimum telemetry, and rollback triggers."
         }
@@ -80,9 +75,8 @@
           "title": "Define scope and threat model",
           "goal": "Identify critical assets, trust boundaries, and threat scenarios.",
           "recommendedSkills": [
-            "ethical-hacking-methodology",
-            "threat-modeling-expert",
-            "attack-tree-construction"
+            "security-auditor",
+            "cloud-penetration-testing"
           ],
           "notes": "Document in-scope targets, assumptions, and out-of-scope constraints."
         },
@@ -90,9 +84,8 @@
           "title": "Review authentication and authorization",
           "goal": "Find broken auth patterns and access-control weaknesses.",
           "recommendedSkills": [
-            "broken-authentication",
-            "auth-implementation-patterns",
-            "idor-testing"
+            "api-security-best-practices",
+            "frontend-security-coder"
           ],
           "notes": "Prioritize account takeover and privilege escalation paths."
         },
@@ -101,8 +94,8 @@
           "goal": "Detect high-impact API and injection risks.",
           "recommendedSkills": [
             "api-security-best-practices",
-            "api-fuzzing-bug-bounty",
-            "top-web-vulnerabilities"
+            "api-security-testing",
+            "api-fuzzing-bug-bounty"
           ],
           "notes": "Map findings to severity and exploitability, not only CVSS."
         },
@@ -110,9 +103,7 @@
           "title": "Harden and verify",
           "goal": "Translate findings into concrete remediations and retest.",
           "recommendedSkills": [
-            "security-auditor",
-            "sast-configuration",
-            "verification-before-completion"
+            "security-auditor"
           ],
           "notes": "Track remediation owners and target dates; verify each fix with evidence."
         }
@@ -132,9 +123,9 @@
           "title": "Define use case and reliability targets",
           "goal": "Choose a narrow use case and measurable quality goals.",
           "recommendedSkills": [
-            "ai-agents-architect",
-            "agent-evaluation",
-            "product-manager-toolkit"
+            "llm-app-patterns",
+            "multi-agent-patterns",
+            "llm-evaluation"
           ],
           "notes": "Set latency, quality, and failure-rate thresholds before implementation."
         },
@@ -143,9 +134,7 @@
           "goal": "Design tools, memory, and retrieval strategy for the agent.",
           "recommendedSkills": [
             "llm-app-patterns",
-            "rag-implementation",
-            "vector-database-engineer",
-            "embedding-strategies"
+            "rag-implementation"
           ],
           "notes": "Keep retrieval quality measurable and version prompt/tool contracts."
         },
@@ -153,9 +142,7 @@
           "title": "Implement orchestration",
           "goal": "Implement the orchestration loop and production safeguards.",
           "recommendedSkills": [
-            "langgraph",
-            "mcp-builder",
-            "workflow-automation"
+            "mcp-builder"
           ],
           "notes": "Start with constrained tool permissions and explicit fallback behavior."
         },
@@ -163,9 +150,8 @@
           "title": "Evaluate and iterate",
           "goal": "Run benchmark scenarios and improve weak areas systematically.",
           "recommendedSkills": [
-            "agent-evaluation",
-            "langfuse",
-            "kaizen"
+            "llm-evaluation",
+            "hugging-face-evaluation"
           ],
           "notes": "Use test datasets and failure buckets to guide each iteration cycle."
         }
@@ -185,9 +171,7 @@
           "title": "Prepare test strategy",
           "goal": "Define critical user journeys, environments, and test data.",
           "recommendedSkills": [
-            "e2e-testing-patterns",
-            "test-driven-development",
-            "code-review-checklist"
+            "test-driven-development"
           ],
           "notes": "Focus on business-critical flows and keep setup deterministic."
         },
@@ -204,9 +188,9 @@
           "title": "Triage failures and harden",
           "goal": "Stabilize flaky tests and establish repeatable CI execution.",
           "recommendedSkills": [
-            "systematic-debugging",
-            "test-fixing",
-            "verification-before-completion"
+            "debugging-strategies",
+            "error-diagnostics-smart-debug",
+            "webapp-testing"
           ],
           "notes": "Classify failures by root cause: selector drift, timing, environment, data."
         }
@@ -226,8 +210,8 @@
           "title": "Assess DDD fit and scope",
           "goal": "Decide if full DDD is justified and define the modeling scope.",
           "recommendedSkills": [
-            "domain-driven-design",
-            "architecture-decision-records"
+            "architecture",
+            "database-design"
           ],
           "notes": "Document why DDD is needed, where to keep it lightweight, and what success looks like."
         },
@@ -235,7 +219,8 @@
           "title": "Create strategic model",
           "goal": "Define subdomains, bounded contexts, and ubiquitous language.",
           "recommendedSkills": [
-            "ddd-strategic-design"
+            "architecture",
+            "microservices-patterns"
           ],
           "notes": "Classify subdomains and assign ownership before making implementation decisions."
         },
@@ -243,7 +228,8 @@
           "title": "Map context relationships",
           "goal": "Define context integration patterns, ownership, and translation boundaries.",
           "recommendedSkills": [
-            "ddd-context-mapping"
+            "architecture",
+            "microservices-patterns"
           ],
           "notes": "Prefer explicit contracts and anti-corruption layers where domain models diverge."
         },
@@ -251,7 +237,6 @@
           "title": "Implement tactical model",
           "goal": "Encode invariants with aggregates, value objects, repositories, and domain events.",
           "recommendedSkills": [
-            "ddd-tactical-patterns",
             "test-driven-development"
           ],
           "notes": "Start from invariants and transaction boundaries, not from tables or endpoints."
@@ -260,10 +245,9 @@
           "title": "Adopt evented patterns selectively",
           "goal": "Apply CQRS, event store, projections, and sagas only where required.",
           "recommendedSkills": [
-            "cqrs-implementation",
-            "event-store-design",
-            "projection-patterns",
-            "saga-orchestration"
+            "architecture",
+            "microservices-patterns",
+            "database-design"
           ],
           "notes": "Use evented patterns where consistency and scale tradeoffs are explicit and accepted."
         }

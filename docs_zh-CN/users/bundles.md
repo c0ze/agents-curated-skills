@@ -28,11 +28,7 @@
 
 _适合所有人。先安装这些。_
 
-- [`concise-planning`](../../skills/concise-planning/): 总是从计划开始。
 - [`lint-and-validate`](../../skills/lint-and-validate/): 自动保持代码整洁。
-- [`git-pushing`](../../skills/git-pushing/): 安全保存您的工作。
-- [`kaizen`](../../skills/kaizen/): 持续改进心态。
-- [`systematic-debugging`](../../skills/systematic-debugging/): 像专业人士一样调试。
 
 ---
 
@@ -42,24 +38,12 @@ _适合所有人。先安装这些。_
 
 _前端和全栈开发者保护应用安全。_
 
-- [`security-audit`](../../skills/security-audit/): 应用安全基础。
-- [`xss-protection`](../../skills/xss-protection/): 跨站脚本防护。
-- [`csrf-protection`](../../skills/csrf-protection/): 跨站请求伪造防护。
-- [`input-validation`](../../skills/input-validation/): 输入验证最佳实践。
-- [`secure-session-management`](../../skills/secure-session-management/): 会话管理安全。
-- [`oauth2-setup`](../../skills/oauth2-setup/): OAuth 2.0实现。
-- [`encryption-basics`](../../skills/encryption-basics/): 加密基础。
 
 ### 🛡️ "渗透测试员"包
 
 _安全研究员和道德黑客。_
 
-- [`pen-testing`](../../skills/pen-testing/): 渗透测试方法论。
-- [`vulnerability-scanner`](../../skills/vulnerability-scanner/): 漏洞扫描技术。
-- [`sql-injection-testing`](../../skills/sql-injection-testing/): SQL注入测试。
 - [`api-security-testing`](../../skills/api-security-testing/): API安全测试。
-- [`network-security-audit`](../../skills/network-security-audit/): 网络安全审计。
-- [`social-engineering-testing`](../../skills/social-engineering-testing/): 社会工程测试。
 
 ---
 
@@ -70,22 +54,12 @@ _安全研究员和道德黑客。_
 _React开发者全栈技能集。_
 
 - [`react-patterns`](../../skills/react-patterns/): React设计模式。
-- [`hooks-mastery`](../../skills/hooks-mastery/): React Hooks精通。
-- [`state-management`](../../skills/state-management/): 状态管理策略。
-- [`performance-optimization`](../../skills/performance-optimization/): 性能优化。
-- [`testing-patterns`](../../skills/testing-patterns/): 测试模式。
-- [`tailwind-mastery`](../../skills/tailwind-mastery/): Tailwind CSS精通。
 
 ### 🎨 "前端设计师"包
 
 _UI/UX设计师和前端开发者。_
 
 - [`frontend-design`](../../skills/frontend-design/): 前端设计原则。
-- [`responsive-design`](../../skills/responsive-design/): 响应式设计。
-- [`accessibility`](../../skills/accessibility/): 无障碍开发。
-- [`color-theory`](../../skills/color-theory/): 色彩理论应用。
-- [`typography-mastery`](../../skills/typography-mastery/): 排版精通。
-- [`animation-design`](../../skills/animation-design/): 动画设计。
 
 ---
 
@@ -95,23 +69,11 @@ _UI/UX设计师和前端开发者。_
 
 _后端开发者API设计技能。_
 
-- [`api-design`](../../skills/api-design/): API设计原则。
-- [`rest-best-practices`](../../skills/rest-best-practices/): REST最佳实践。
-- [`openapi-spec`](../../skills/openapi-spec/): OpenAPI规范。
-- [`authentication-patterns`](../../skills/authentication-patterns/): 认证模式。
-- [`rate-limiting`](../../skills/rate-limiting/): 速率限制实现。
-- [`error-handling`](../../skills/error-handling/): 错误处理策略。
 
 ### 🗄️ "数据库专家"包
 
 _数据库设计和优化。_
 
-- [`schema-design`](../../skills/schema-design/): 数据库模式设计。
-- [`query-optimization`](../../skills/query-optimization/): 查询优化。
-- [`indexing-strategies`](../../skills/indexing-strategies/): 索引策略。
-- [`migration-patterns`](../../skills/migration-patterns/): 数据迁移模式。
-- [`backup-recovery`](../../skills/backup-recovery/): 备份和恢复。
-- [`security-hardening`](../../skills/database-security-hardening/): 数据库安全加固。
 
 ---
 
@@ -121,23 +83,12 @@ _数据库设计和优化。_
 
 _构建AI应用的核心技能。_
 
-- [`prompt-engineer`](../../skills/prompt-engineer/): 提示工程。
-- [`langchain`](../../skills/langchain/): LangChain框架。
 - [`rag-engineer`](../../skills/rag-engineer/): RAG系统构建。
-- [`llm-patterns`](../../skills/llm-patterns/): LLM应用模式。
-- [`vector-databases`](../../skills/vector-databases/): 向量数据库。
-- [`ai-safety`](../../skills/ai-safety/): AI安全和伦理。
 
 ### 🤖 "机器学习工程师"包
 
 _ML模型开发和部署。_
 
-- [`model-development`](../../skills/model-development/): 模型开发。
-- [`data-preprocessing`](../../skills/data-preprocessing/): 数据预处理。
-- [`feature-engineering`](../../skills/feature-engineering/): 特征工程。
-- [`model-deployment`](../../skills/model-deployment/): 模型部署。
-- [`mlops-patterns`](../../skills/mlops-patterns/): MLOps模式。
-- [`experiment-tracking`](../../skills/experiment-tracking/): 实验跟踪。
 
 ---
 
@@ -148,21 +99,11 @@ _ML模型开发和部署。_
 _容器化应用开发。_
 
 - [`docker-expert`](../../skills/docker-expert/): Docker精通。
-- [`docker-compose`](../../skills/docker-compose/): Docker Compose。
-- [`container-security`](../../skills/container-security/): 容器安全。
-- [`multi-stage-builds`](../../skills/multi-stage-builds/): 多阶段构建。
-- [`orchestration-basics`](../../skills/orchestration-basics/): 编排基础。
 
 ### ☁️ "Kubernetes专家"包
 
 _容器编排和管理。_
 
-- [`kubernetes-deployment`](../../skills/kubernetes-deployment/): K8s部署。
-- [`service-mesh`](../../skills/service-mesh/): 服务网格。
-- [`monitoring-setup`](../../skills/monitoring-setup/): 监控设置。
-- [`logging-strategies`](../../skills/logging-strategies/): 日志策略。
-- [`autoscaling-patterns`](../../skills/autoscaling-patterns/): 自动扩缩容。
-- [`disaster-recovery`](../../skills/disaster-recovery/): 灾难恢复。
 
 ---
 
@@ -172,12 +113,6 @@ _容器编排和管理。_
 
 _跨平台移动开发。_
 
-- [`react-native-patterns`](../../skills/react-native-patterns/): RN设计模式。
-- [`mobile-performance`](../../skills/mobile-performance/): 移动端性能。
-- [`push-notifications`](../../skills/push-notifications/): 推送通知。
-- [`app-distribution`](../../skills/app-distribution/): 应用分发。
-- [`offline-first`](../../skills/offline-first/): 离线优先设计。
-- [`mobile-security`](../../skills/mobile-security/): 移动应用安全。
 
 ---
 
@@ -188,11 +123,6 @@ _跨平台移动开发。_
 _全面测试策略。_
 
 - [`test-driven-development`](../../skills/test-driven-development/): TDD方法论。
-- [`testing-patterns`](../../skills/testing-patterns/): 测试模式。
-- [`e2e-testing`](../../skills/e2e-testing/): 端到端测试。
-- [`performance-testing`](../../skills/performance-testing/): 性能测试。
-- [`accessibility-testing`](../../skills/accessibility-testing/): 无障碍测试。
-- [`test-automation`](../../skills/test-automation/): 测试自动化。
 
 ---
 
@@ -202,9 +132,6 @@ _全面测试策略。_
 
 _产品开发和管理。_
 
-- [`product-strategy`](../../skills/product-strategy/): 产品策略。
-- [`user-story-writing`](../../skills/user-story-writing/): 用户故事编写。
-- [`roadmap-planning`](../../skills/roadmap-planning/): 路线图规划。
 - `market-research`: 市场研究。
 - `analytics-interpretation`: 数据分析解读。
 
@@ -216,12 +143,6 @@ _产品开发和管理。_
 
 _提升开发生产力。_
 
-- [`git-advanced`](../../skills/git-advanced/): Git高级用法。
-- [`vim-mastery`](../../skills/vim-mastery/): Vim精通。
-- [`vscode-shortcuts`](../../skills/vscode-shortcuts/): VSCode快捷键。
-- [`shell-scripting`](../../skills/shell-scripting/): Shell脚本。
-- [`regex-mastery`](../../skills/regex-mastery/): 正则表达式精通。
-- [`keyboard-shortcuts`](../../skills/keyboard-shortcuts/): 键盘快捷键。
 
 ---
 
@@ -231,11 +152,6 @@ _提升开发生产力。_
 
 _界面和用户体验设计。_
 
-- [`design-systems`](../../skills/design-systems/): 设计系统。
-- [`prototyping`](../../skills/prototyping/): 原型设计。
-- [`user-research`](../../skills/user-research/): 用户研究。
-- [`interaction-design`](../../skills/interaction-design/): 交互设计。
-- [`visual-design`](../../skills/visual-design/): 视觉设计。
 
 ---
 
@@ -245,11 +161,6 @@ _界面和用户体验设计。_
 
 _持续学习和知识管理。_
 
-- [`learning-strategies`](../../skills/learning-strategies/): 学习策略。
-- [`note-taking`](../../skills/note-taking/): 笔记方法。
-- [`knowledge-management`](../../skills/knowledge-management/): 知识管理。
-- [`spaced-repetition`](../../skills/spaced-repetition/): 间隔重复。
-- [`speed-reading`](../../skills/speed-reading/): 快速阅读。
 
 ---
 
@@ -259,8 +170,6 @@ _持续学习和知识管理。_
 
 _创业和商业技能。_
 
-- [`business-model-canvas`](../../skills/business-model-canvas/): 商业模式画布。
-- [`pitch-deck`](../../skills/pitch-deck/): 融资路演。
 - `market-validation`: 市场验证。
 - `financial-modeling`: 财务建模。
 - `growth-hacking`: 增长黑客。

@@ -161,7 +161,7 @@ npx agents-curated-skills --uninstall --path ~/.agents/skills
 A: You clone the whole repo once; your AI only _reads_ the skills you invoke (or that are relevant), so it stays lightweight. **Starter Packs** in [bundles.md](bundles.md) are curated lists to help you discover the right skills for your role—they don't change how you install.
 
 **Q: Can I make my own skills?**
-A: Yes! Use the **@skill-creator** skill to build your own.
+A: Yes. Start with the contributor skill anatomy guide and validate the resulting `SKILL.md` before installing it.
 
 **Q: What if Antigravity on Windows gets stuck in a truncation crash loop?**
 A: Follow the recovery steps in [windows-truncation-recovery.md](windows-truncation-recovery.md). It explains which Antigravity storage folders to back up and clear, and includes an optional batch helper adapted from [issue #274](https://github.com/c0ze/agents-curated-skills/issues/274).

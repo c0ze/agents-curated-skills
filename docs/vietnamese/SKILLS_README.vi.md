@@ -42,7 +42,7 @@ Sử dụng biểu tượng `@` theo sau bởi tên kỹ năng:
 hoặc
 
 ```
-@stripe-integration thêm xử lý thanh toán vào ứng dụng của tôi
+@paypal-integration thêm xử lý thanh toán vào ứng dụng của tôi
 ```
 
 ### Bước 3: AI trở thành chuyên gia
@@ -71,8 +71,8 @@ Xem [README chính](../README.vi.md) để biết danh sách đầy đủ tất 
 
 **Cho người mới bắt đầu:**
 - `@brainstorming` - Thiết kế trước khi code
-- `@systematic-debugging` - Sửa lỗi một cách có phương pháp
-- `@git-pushing` - Commit với thông báo tốt
+- `@debugging-strategies` - Sửa lỗi một cách có phương pháp
+- `@codebase-audit-pre-push` - Commit với thông báo tốt
 
 **Cho lập trình viên:**
 - `@test-driven-development` - Viết test trước
@@ -80,8 +80,8 @@ Xem [README chính](../README.vi.md) để biết danh sách đầy đủ tất 
 - `@senior-fullstack` - Phát triển Full-stack
 
 **Cho bảo mật:**
-- `@ethical-hacking-methodology` - Cơ bản về bảo mật
-- `@burp-suite-testing` - Kiểm thử bảo mật ứng dụng web
+- `@security-auditor` - Cơ bản về bảo mật
+- `@api-fuzzing-bug-bounty` - Kiểm thử bảo mật ứng dụng web
 
 ---
 
@@ -90,7 +90,7 @@ Xem [README chính](../README.vi.md) để biết danh sách đầy đủ tất 
 Muốn tạo một kỹ năng mới? Hãy xem:
 1. [CONTRIBUTING.vi.md](../docs/vietnamese/CONTRIBUTING.vi.md) - Cách đóng góp
 2. [docs/vietnamese/SKILL_ANATOMY.vi.md](../docs/vietnamese/SKILL_ANATOMY.vi.md) - Hướng dẫn cấu trúc kỹ năng
-3. `@skill-creator` - Sử dụng kỹ năng này để tạo kỹ năng mới!
+3. [docs/contributors/skill-anatomy.md](../contributors/skill-anatomy.md) - Hướng dẫn cấu trúc để tạo kỹ năng mới.
 
 ---
 

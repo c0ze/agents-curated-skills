@@ -192,7 +192,7 @@ Use the `@` symbol followed by the skill name:
 **Yes!** You can invoke multiple skills:
 
 ```bash
-@brainstorming help me design this, then use @writing-plans to create a task list.
+@brainstorming help me design this, then use @doc-coauthoring to create a task list.
 ```
 
 ### How do I know which skill to use?
@@ -270,8 +270,8 @@ Common fixes:
 ## Pro Tips
 
 - Start with `@brainstorming` before building anything new
-- Use `@systematic-debugging` when stuck on bugs
+- Use `@debugging-strategies` when stuck on bugs
 - Try `@test-driven-development` for better code quality
-- Explore `@skill-creator` to make your own skills
+- Use the contributor skill anatomy guide to make your own skills
 
 **Still confused?** [Open a discussion](https://github.com/c0ze/agents-curated-skills/discussions) and we'll help you out! 🙌

@@ -12,8 +12,8 @@ Great question! Here's what just happened and what to do next:
 
 When you ran `npx agents-curated-skills` or cloned the repository, you:
 
-✅ **Downloaded 1,254+ skill files** to your computer (default: `~/.gemini/antigravity/skills/`; or `~/.agent/skills/` if you used `--path`)  
-✅ **Made them available** to your AI assistant  
+✅ **Downloaded 1,254+ skill files** to your computer (default: `~/.gemini/antigravity/skills/`; or `~/.agent/skills/` if you used `--path`)
+✅ **Made them available** to your AI assistant
 ❌ **Did NOT enable them all automatically** (they're just sitting there, waiting)
 
 Think of it like installing a toolbox. You have all the tools now, but you need to **pick which ones to use** for each job.
@@ -38,8 +38,8 @@ Bundles are **recommended lists** of skills grouped by role. They help you decid
 
 ### What Bundles Are NOT
 
-❌ Separate installations  
-❌ Different download commands  
+❌ Separate installations
+❌ Different download commands
 ❌ Something you need to "activate"
 
 ### Example: The "Web Wizard" Bundle
@@ -156,7 +156,7 @@ Here are **real-world examples** of good prompts:
 
 **Good Prompt:**
 
-> "Use @brainstorming to design a payment flow, then apply @stripe-integration to implement it"
+> "Use @brainstorming to design a payment flow, then apply @paypal-integration to implement it"
 
 **Why it's good:** You can chain skills together in a single prompt!
 
@@ -198,16 +198,16 @@ Don't try to use all 1,254+ skills at once. Here's a sensible approach:
 
 1. **`@brainstorming`** - Plan before you build
 2. **`@lint-and-validate`** - Keep code clean
-3. **`@git-pushing`** - Save work safely
-4. **`@systematic-debugging`** - Fix bugs faster
-5. **`@concise-planning`** - Organize tasks
+3. **`@codebase-audit-pre-push`** - Check work before sharing
+4. **`@debugging-strategies`** - Fix bugs faster
+5. **`@doc-coauthoring`** - Organize tasks and notes
 
 **How to use them:**
 
 - Before writing new code → `@brainstorming`
 - After writing code → `@lint-and-validate`
-- Before committing → `@git-pushing`
-- When stuck → `@systematic-debugging`
+- Before committing → `@codebase-audit-pre-push`
+- When stuck → `@debugging-strategies`
 
 ### Then Add Role-Specific Skills (5-10 more)
 
@@ -218,20 +218,20 @@ Find your role in [bundles.md](bundles.md) and pick 5-10 skills from that bundle
 - `@frontend-design`
 - `@react-best-practices`
 - `@tailwind-patterns`
-- `@seo-audit`
+- `@fixing-metadata`
 
 **Example for Security Engineer:**
 
 - `@api-security-best-practices`
-- `@vulnerability-scanner`
-- `@ethical-hacking-methodology`
+- `@security-auditor`
+- `@cloud-penetration-testing`
 
 ### Finally, Add On-Demand Skills (as needed)
 
 Keep the [CATALOG.md](../../CATALOG.md) open as reference. When you need something specific:
 
-> "I need to integrate Stripe payments"  
-> → Search catalog → Find `@stripe-integration` → Use it!
+> "I need to integrate PayPal payments"
+> → Search catalog → Find `@paypal-integration` → Use it!
 
 ---
 
@@ -267,10 +267,10 @@ You: Use @tailwind-patterns to make the blog posts look modern
 AI: [Applies Tailwind styling with responsive design]
 ```
 
-#### Step 4: SEO (use @seo-audit)
+#### Step 4: SEO (use @fixing-metadata)
 
 ```
-You: Use @seo-audit to optimize the blog for search engines
+You: Use @fixing-metadata to optimize the blog for search engines
 
 AI: [Adds meta tags, sitemaps, structured data]
 ```
@@ -278,7 +278,7 @@ AI: [Adds meta tags, sitemaps, structured data]
 #### Step 5: Test & Deploy
 
 ```
-You: Use @test-driven-development to add tests, then @vercel-deployment to deploy
+You: Use @test-driven-development to add tests, then @deployment-procedures to deploy
 
 AI: [Creates tests, sets up CI/CD, deploys to Vercel]
 ```
@@ -329,11 +329,9 @@ If you are building your own host/agent (e.g. Jetski/Cortex + Gemini), see:
 
 ### "Can I create my own skills?"
 
-Yes! Use the `@skill-creator` skill:
+Yes. Start from the contributor skill anatomy guide:
 
-```
-Use @skill-creator to help me build a custom skill for [your task]
-```
+[`docs/contributors/skill-anatomy.md`](../contributors/skill-anatomy.md)
 
 ### "What if a skill doesn't work as expected?"
 
@@ -351,11 +349,11 @@ Use @skill-creator to help me build a custom skill for [your task]
 | ---------------- | ------------------------------ | --------------------------------------------------- |
 | Plan new feature | `@brainstorming`               | `Use @brainstorming to design a login system`       |
 | Review code      | `@lint-and-validate`           | `Use @lint-and-validate on src/app.js`              |
-| Debug issue      | `@systematic-debugging`        | `Use @systematic-debugging to fix login error`      |
+| Debug issue      | `@debugging-strategies`        | `Use @debugging-strategies to fix login error`      |
 | Security audit   | `@api-security-best-practices` | `Use @api-security-best-practices on my API routes` |
-| SEO check        | `@seo-audit`                   | `Use @seo-audit on my landing page`                 |
+| Metadata check   | `@fixing-metadata`             | `Use @fixing-metadata on my landing page`           |
 | React component  | `@react-patterns`              | `Use @react-patterns to build a form component`     |
-| Deploy app       | `@vercel-deployment`           | `Use @vercel-deployment to ship this to production` |
+| Deploy app       | `@deployment-procedures`       | `Use @deployment-procedures to ship this to production` |
 
 ---
 
@@ -382,7 +380,7 @@ Now that you understand how to use skills:
 
 ### Tip 3: Be Specific in Prompts
 
-> Bad: "Use @react-patterns"  
+> Bad: "Use @react-patterns"
 > Good: "Use @react-patterns to build a modal component with animations"
 
 ### Tip 4: Reference File Paths

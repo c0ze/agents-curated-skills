@@ -64,7 +64,7 @@ Apply @aws-serverless patterns to this Lambda function
 ```
 
 ```
-Run @security-audit on my CDK stack
+Run @security-auditor on my CDK stack
 ```
 
 ### Recommended Skills for Kiro Users
@@ -72,25 +72,25 @@ Run @security-audit on my CDK stack
 #### AWS & Cloud Infrastructure
 
 - `@aws-serverless` - Serverless architecture patterns
-- `@aws-cdk` - AWS CDK best practices
-- `@aws-sam` - SAM template patterns
-- `@terraform-expert` - Terraform infrastructure as code
+- `@aws-serverless` - AWS CDK best practices
+- `@aws-serverless` - SAM template patterns
+- `@terraform-specialist` - Terraform infrastructure as code
 - `@docker-expert` - Container optimization
-- `@kubernetes-expert` - K8s deployment patterns
+- `@kubernetes-architect` - K8s deployment patterns
 
 #### Architecture & Design
 
 - `@architecture` - System design and ADRs
-- `@c4-context` - C4 model diagrams
-- `@senior-architect` - Scalable architecture patterns
+- `@architecture` - C4 model diagrams
+- `@architecture` - Scalable architecture patterns
 - `@microservices-patterns` - Microservices design
 
 #### Security
 
 - `@api-security-best-practices` - API security hardening
-- `@vulnerability-scanner` - Security vulnerability detection
-- `@owasp-top-10` - OWASP security patterns
-- `@aws-security-best-practices` - AWS security configuration
+- `@security-auditor` - Security vulnerability detection
+- `@api-security-best-practices` - OWASP security patterns
+- `@aws-skills` - AWS security configuration
 
 #### Development
 
@@ -101,10 +101,10 @@ Run @security-audit on my CDK stack
 
 #### DevOps & Automation
 
-- `@ci-cd-pipeline` - CI/CD automation
-- `@github-actions` - GitHub Actions workflows
-- `@monitoring-observability` - Observability patterns
-- `@incident-response` - Incident management
+- `@github-workflow-automation` - CI/CD automation
+- `@github-workflow-automation` - GitHub Actions workflows
+- `@observability-engineer` - Observability patterns
+- `@observability-engineer` - Incident management
 
 ## Kiro-Specific Workflows
 
@@ -113,27 +113,27 @@ Run @security-audit on my CDK stack
 ```
 1. Use @brainstorming to design the application architecture
 2. Apply @aws-serverless to create Lambda functions
-3. Use @aws-cdk to generate infrastructure code
+3. Use @aws-serverless to generate infrastructure code
 4. Run @test-driven-development to add tests
-5. Apply @ci-cd-pipeline to set up deployment
+5. Apply @github-workflow-automation to set up deployment
 ```
 
 ### 2. Infrastructure as Code
 
 ```
 1. Use @architecture to document the system design
-2. Apply @terraform-expert to write Terraform modules
-3. Run @security-audit to check for vulnerabilities
-4. Use @documentation to generate README and runbooks
+2. Apply @terraform-specialist to write Terraform modules
+3. Run @security-auditor to check for vulnerabilities
+4. Use @doc-coauthoring to generate README and runbooks
 ```
 
 ### 3. API Development
 
 ```
-1. Use @api-design to plan endpoints
+1. Use @api-design-principles to plan endpoints
 2. Apply @typescript-expert for implementation
 3. Run @api-security-best-practices for hardening
-4. Use @openapi-spec to generate documentation
+4. Use @api-documenter to generate documentation
 ```
 
 ## Advanced Features
@@ -150,16 +150,16 @@ Kiro's MCP support allows skills to:
 Skills that leverage MCP:
 
 - `@rag-engineer` - RAG system implementation
-- `@langgraph` - Agent workflow orchestration
-- `@prompt-engineer` - LLM prompt optimization
+- `@mcp-builder` - Agent tool and MCP orchestration
+- `@llm-prompt-optimizer` - LLM prompt optimization
 
 ### Autonomous Operation
 
 Kiro can work independently for extended periods. Use skills to guide long-running tasks:
 
 ```
-Use @systematic-debugging to investigate and fix all TypeScript errors in the codebase,
-then apply @test-driven-development to add missing tests, and finally run @documentation
+Use @debugging-strategies to investigate and fix all TypeScript errors in the codebase,
+then apply @test-driven-development to add missing tests, and finally run @doc-coauthoring
 to update all README files.
 ```
 
@@ -170,7 +170,7 @@ Kiro maintains deep context. Reference multiple skills in complex workflows:
 ```
 I'm building a SaaS application. Use @brainstorming for the MVP plan,
 @aws-serverless for the backend, @react-patterns for the frontend,
-@stripe-integration for payments, and @security-audit for hardening.
+@paypal-integration for payments, and @security-auditor for hardening.
 ```
 
 ## Bundles for Kiro Users
@@ -180,29 +180,29 @@ Pre-curated skill collections optimized for common Kiro use cases:
 ### AWS Developer Bundle
 
 - `@aws-serverless`
-- `@aws-cdk`
-- `@aws-sam`
-- `@lambda-best-practices`
-- `@dynamodb-patterns`
-- `@api-gateway-patterns`
+- `@aws-serverless`
+- `@aws-serverless`
+- `@aws-serverless`
+- `@aws-serverless`
+- `@api-patterns`
 
 ### Full-Stack AWS Bundle
 
 - `@aws-serverless`
 - `@react-patterns`
 - `@typescript-expert`
-- `@api-design`
+- `@api-design-principles`
 - `@test-driven-development`
-- `@ci-cd-pipeline`
+- `@github-workflow-automation`
 
 ### DevOps & Infrastructure Bundle
 
-- `@terraform-expert`
+- `@terraform-specialist`
 - `@docker-expert`
-- `@kubernetes-expert`
-- `@monitoring-observability`
-- `@incident-response`
-- `@security-audit`
+- `@kubernetes-architect`
+- `@observability-engineer`
+- `@observability-engineer`
+- `@security-auditor`
 
 See [bundles.md](bundles.md) for complete bundle listings.
 
@@ -241,7 +241,7 @@ chmod -R 755 ~/.kiro/skills/
 2. **Combine skills** - Reference multiple skills in complex tasks
 3. **Be specific** - Clearly state which skill to use and what to do
 4. **Iterate** - Let Kiro work autonomously, then refine with additional skills
-5. **Document** - Use `@documentation` to keep your codebase well-documented
+5. **Document** - Use `@doc-coauthoring` to keep your codebase well-documented
 
 ## Examples
 
@@ -251,10 +251,10 @@ chmod -R 755 ~/.kiro/skills/
 I need to build a REST API for a todo application using AWS Lambda and DynamoDB.
 
 Use @brainstorming to design the architecture, then apply @aws-serverless
-to implement the Lambda functions, @dynamodb-patterns for data modeling,
+to implement the Lambda functions, @aws-serverless for data modeling,
 and @api-security-best-practices for security hardening.
 
-Generate the infrastructure using @aws-cdk and add tests with @test-driven-development.
+Generate the infrastructure using @aws-serverless and add tests with @test-driven-development.
 ```
 
 ### Example 2: Migrate to Microservices
@@ -264,9 +264,9 @@ I want to break down this monolithic application into microservices.
 
 Use @architecture to create an ADR for the migration strategy,
 apply @microservices-patterns for service boundaries,
-@docker-expert for containerization, and @kubernetes-expert for orchestration.
+@docker-expert for containerization, and @kubernetes-architect for orchestration.
 
-Document the migration plan with @documentation.
+Document the migration plan with @doc-coauthoring.
 ```
 
 ### Example 3: Security Audit
@@ -274,9 +274,9 @@ Document the migration plan with @documentation.
 ```
 Perform a comprehensive security audit of this application.
 
-Use @security-audit to scan for vulnerabilities, @owasp-top-10 to check
+Use @security-auditor to scan for vulnerabilities, @api-security-best-practices to check
 for common issues, @api-security-best-practices for API hardening,
-and @aws-security-best-practices for cloud configuration.
+and @aws-skills for cloud configuration.
 
 Generate a report with findings and remediation steps.
 ```

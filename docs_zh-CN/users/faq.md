@@ -120,16 +120,16 @@ ls ~/.gemini/antigravity/skills/*/SKILL.md | head -10
 **常见原因和解决方案：**
 
 1. **缺少上下文**
-   - ❌ "使用@api-design设计API"
-   - ✅ "使用@api-design设计用户管理API，需要JWT认证"
+   - ❌ "使用@api-design-principles设计API"
+   - ✅ "使用@api-design-principles设计用户管理API，需要JWT认证"
 
 2. **技能不匹配**
    - ❌ 用通用技能处理专门问题
-   - ✅ 使用更具体的技能（如`@sql-injection-testing`而不是`@security-audit`）
+   - ✅ 使用更具体的技能（如`@api-fuzzing-bug-bounty`而不是`@security-auditor`）
 
 3. **提示太模糊**
    - ❌ "优化这个代码"
-   - ✅ "使用@performance-analyzer优化这个React组件的渲染性能"
+   - ✅ "使用@python-performance-optimization优化这个React组件的渲染性能"
 
 ### 可以同时使用多个技能吗？
 
@@ -150,10 +150,10 @@ ls ~/.gemini/antigravity/skills/*/SKILL.md | head -10
 查看[bundles.md](bundles.md)中您的角色相关技能。
 
 **方法3：按任务查找**
-- 安全相关 → `@security-audit`, `@pen-testing`, `@vulnerability-scanner`
-- 性能优化 → `@performance-analyzer`, `@optimization`
-- API开发 → `@api-design`, `@openapi-spec`
-- 前端开发 → `@react-patterns`, `@tailwind-mastery`
+- 安全相关 → `@security-auditor`, `@cloud-penetration-testing`, `@security-auditor`
+- 性能优化 → `@python-performance-optimization`, `@context-optimization`
+- API开发 → `@api-design-principles`, `@api-documenter`
+- 前端开发 → `@react-patterns`, `@tailwind-patterns`
 
 ---
 

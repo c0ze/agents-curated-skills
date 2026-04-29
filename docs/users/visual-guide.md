@@ -15,7 +15,7 @@
 ├─────────────────────────────────────────────────────────────┤
 │                  AI ASSISTANT                               │
 │                          ↓                                  │
-│              Loads @stripe-integration skill                │
+│              Loads @paypal-integration skill                │
 │                          ↓                                  │
 │         Becomes an expert in Stripe payments                │
 │                          ↓                                  │
@@ -242,13 +242,13 @@ agents-curated-skills/
 │ STEP 2: Find the Right Skill                               │
 ├─────────────────────────────────────────────────────────────┤
 │ Search: "payment" or "stripe"                               │
-│ Found: @stripe-integration                                  │
+│ Found: @paypal-integration                                  │
 └─────────────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────────────┐
 │ STEP 3: Invoke the Skill                                   │
 ├─────────────────────────────────────────────────────────────┤
-│ You: @stripe-integration help me add subscription billing  │
+│ You: @paypal-integration help me add subscription billing  │
 └─────────────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────────────┐
@@ -312,7 +312,7 @@ Open skills_index.json → Search for keyword → Find skill path
        ↓
 ┌──────────────┐
 │ 4. TEST      │  Copy to .agent/skills/
-└──────┬───────┘  Try: @docker-mastery
+└──────┬───────┘  Try: @docker-expert
        │
        ↓
 ┌──────────────┐
@@ -344,7 +344,7 @@ Open skills_index.json → Search for keyword → Find skill path
 │                            • Best practices      • Templates│
 │                                                  • Docs     │
 │  Example:                  Example:              Example:   │
-│  git-pushing               brainstorming         loki-mode  │
+│  clean-code                 brainstorming         loki-mode  │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```

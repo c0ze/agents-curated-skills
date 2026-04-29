@@ -94,7 +94,7 @@ _Kiểm tra [Danh mục Skill (Skill Catalog)](../CATALOG.vi.md) để xem danh 
 Đ: Bạn tải toàn bộ repo về, nhưng AI của bạn chỉ _đọc_ những kỹ năng bạn yêu cầu (hoặc những kỹ năng có liên quan). Nó rất nhẹ!
 
 **H: Tôi có thể tự tạo kỹ năng cho riêng mình không?**  
-Đ: Có! Sử dụng kỹ năng **@skill-creator** để tự xây dựng.
+Đ: Có. Hãy bắt đầu với hướng dẫn cấu trúc kỹ năng trong `docs/contributors/skill-anatomy.md`.
 
 **H: Nó có miễn phí không?**  
 Đ: Có, Giấy phép MIT. Mã nguồn mở mãi mãi.
